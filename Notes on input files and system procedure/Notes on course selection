@@ -4,8 +4,9 @@ Step 1: For a course in the total course pool, check if student already complete
 
 Step 2: Check if course has already been assigned a time for the term, if yes then move on (so students don't take the same class twice)
 
-Step 3: Check if student has all the pre-req needed for this course 1. if yes, add to the course selection pool and move to next course.
-																	2. if no, simply just move to next course without adding current into the pool.
+Step 3: Check if student has all the pre-req needed for this course 
+	1. if yes, add to the course selection pool and move to next course.
+	2. if no, simply just move to next course without adding current into the pool.
 
 Iterate steps 1 and 2 until we reach the end of all courses offered by the University. then,
 
