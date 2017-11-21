@@ -1,0 +1,14 @@
+ Parameter for the system input file:
+
+ a = # student	
+
+ b = # terms		
+
+ c = # courses (core - 2 electives) needed to graduate
+
+ d = Sample term (Specific term that we need to recover the time-table, courses taken, etc.)
+
+ e = Sample student (Specific student that we need to recover its progression through the terms (classes per term, schedule (?), graduated term))
+
+
+ These are to be utilized in our main body, as parameters for the course registration process 
