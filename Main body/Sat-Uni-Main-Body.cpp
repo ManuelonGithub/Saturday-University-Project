@@ -7,16 +7,18 @@
 
 using namespace std;
 
-class course
-{
-private:
-    string courseID;
-    vector<string> pre_req;
 
-public:
-    explicit course(string cID = " ")	{ courseID = cID; }
-    void set_pre_req(string const id )	{ pre_req.push_back(id); }
-    void write(ostream &out) const;
+class course{
+    private:
+        string courseID;
+        vector<string> pre_req;
+    public:
+        course(string cID = " ")	{ courseID = cID; }
+        void set_pre_req{string ID}	{ pre_req.pushback(id);}
+        string return_Course(void) const { return courseID; }
+        string return_preReq(int i) { return pre_req[i];}
+        int return_Size(void) { return pre_req.size();}
+        void write(ostream &out) const;
 };
 
 class classroom{
@@ -29,14 +31,34 @@ public:
 };
 
 class student{
-private:
-    int st_ID;
-    vector<string> completed_courses;
-    int terms_completed;
-    bool graduated;
 
-public:
-    student(int s_ID = 0, int t_c = 0, bool g = false)	{ st_ID = s_ID;	terms_completed = t_c;	graduated = g; }
+	private:
+			int st_ID;
+			vector<string> completed_courses;
+			int terms_completed;
+			bool graduated;
+	
+	public:
+			student(int s_ID = 0, int t_c = 0, bool g = false)	{ st_ID = s_ID;	terms_completed = t_c;	graduated = g; }
+            course randomselect(vector<course> available, int numCourses){ // the vector of courses "available" is the vector of all courses from the file, taken as an argument
+                    course random; // the Random course to be returned
+                    int num_Possible = 0; // the number of random candidates
+                    int check =0;
+                
+                    vector<courses> ran_Possible ;// the array of possible courses to be chosen at random
+        
+                    for (int i=0; i < numCourses; i++) {
+                        for (int k=0; k < numCourses; k++) {
+                            if (available[i].return_Course() != completed_courses[k].return_Course()){ // if the student hasn't taken course already
+                    // then check if the course's prerequisites are finished
+                                    if (available[i].return_preReq(i) == completed_courses[k].return_preReq(k)){ // if the course available has
+                                        
+                                    }
+                            }
+                            }
+                            }
+                            
+                            }
 };
 
 void system_parameters_read(string Filepath, int &st_n, int &t_T, int &t_r_c, int &s_T, int &s_st);
