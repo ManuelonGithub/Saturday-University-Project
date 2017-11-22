@@ -2,9 +2,11 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <cstlib>
+#include <list>
+#include <sstream>
 
 using namespace std;
+
 
 class course{
     private:
@@ -16,18 +18,20 @@ class course{
         string return_Course(void) const { return courseID; }
         string return_preReq(int i) { return pre_req[i];}
         int return_Size(void) { return pre_req.size();}
+        void write(ostream &out) const;
 };
 
 class classroom{
-	private:
-			string room;
-			int vacancy;
-			
-	public:
-			classroom(string r = " ", int vac = 0)	{ room = r;	vacancy = vac; }
+private:
+    string room;
+    int vacancy;
+
+public:
+    classroom(string r = " ", int vac = 0)	{ room = r;	vacancy = vac; }
 };
 
 class student{
+
 	private:
 			int st_ID;
 			vector<string> completed_courses;
@@ -58,87 +62,94 @@ class student{
 };
 
 void system_parameters_read(string Filepath, int &st_n, int &t_T, int &t_r_c, int &s_T, int &s_st);
+void courses_read(string Filepath, vector<course> &courses, int &total_courses_given);
 
 int main()
 {
-	vector<course> courses;
-	vector<classroom> classrooms;
-	list<student> students;
-	
-	int st_num;				// Total number of students going into the University
-	int total_T;			// Total amount of terms we're going to process
-	int total_req_crs;		// Core courses + 2 electives
-	int sample_T;
-	int sample_st;
-	int total_courses_given;
-	
-	bool ini_status = true;
-	
-	ifstream courses_in("courses.txt");
-	ifstream classrooms_in("classrooms.txt");
-	
-	system_parameters_read("system-parameters-in.txt", st_num, total_T, total_req_crs, sample_T, sample_st);
+    vector<course> courses;
+    vector<classroom> classrooms;
+    list<student> students;
 
-	courses_read("courses.txt",courses, total_courses_given);
-	
-	classrooms_read(classrooms);
-	
-	students_ini(students);
-	
-	return 0;
+    int st_num;				// Total number of students going into the University
+    int total_T;			// Total amount of terms we're going to process
+    int total_req_crs;		// Core courses + 2 electives
+    int sample_T;
+    int sample_st;
+    int total_courses_given;
+
+    bool ini_status = true;
+
+    ifstream courses_in("courses.txt");
+    ifstream classrooms_in("classrooms.txt");
+
+    system_parameters_read("system-parameters-in.txt", st_num, total_T, total_req_crs, sample_T, sample_st);
+
+    courses_read("courses.txt",courses, total_courses_given);
+
+    classrooms_read(classrooms);
+
+    students_ini(students);
+
+    return 0;
 }
 
-bool system_parameters_read(string Filepath, int &st_n, int &t_T, int &t_r_c, int &s_T, int &s_st)
+void system_parameters_read(string Filepath, int &st_n, int &t_T, int &t_r_c, int &s_T, int &s_st)
 {
-	sys_par_in.open(Filepath.c_str());
-	
-	if(!sys_par_in)
-	{
-		cout << "error opening system parameters input file. Make sure the name of the file is: system-parameters-in.txt" << endl;
-		
-		exit(0);
-	}
-	else
-	{
-		sys_par_in >> st_n;
-		sys_par_in >> t_T;
-		sys_par_in >> t_r_c;
-		sys_par_in >> s_T;
-		sys_par_in >> s_st;	
-	}
+    ifstream sys_par_in;
+
+    sys_par_in.open(Filepath.c_str());
+
+    if(!sys_par_in)
+    {
+        cout << "error opening system parameters input file. Make sure the name of the file is: system-parameters-in.txt" << endl;
+
+        exit(0);
+    }
+    else
+    {
+        sys_par_in >> st_n;
+        sys_par_in >> t_T;
+        sys_par_in >> t_r_c;
+        sys_par_in >> s_T;
+        sys_par_in >> s_st;
+    }
 }
 
 void courses_read(string Filepath, vector<course> &courses, int &total_courses_given)
 {
-	course *c;
-	string str;
-	
-	courses_in.open(Filepath.c_str());
-	
-	if(!courses_in)
-	{
-		cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
-		
-		exit(0);
-	}
-	else
-	{
-		courses_in >> total_courses_given;
-		
-		while(getline(courses_in, str))
-		{
-			istringstream ss(str);
-			string id;
-			
-			ss >> id;
-			c->new course(id); 
-			
-			while(ss >> id)
-			{
-				c->set_pre_req(id);
-			}
-			
-			courses.pushback(c);
-		}
-		
+    course *c;
+    string str;
+    ifstream courses_in;
+
+    courses_in.open(Filepath.c_str());
+
+    if(!courses_in)
+    {
+        cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
+
+        exit(0);
+    }
+    else
+    {
+        getline(courses_in, str);
+
+        total_courses_given = stoi(str);
+
+        while(getline(courses_in, str))
+        {
+            istringstream ss(str);
+            string id;
+
+            ss >> id;
+            c = new course(id);
+
+            while(ss >> id)
+            {
+                c->set_pre_req(id);
+            }
+
+            courses.push_back(*c);
+        }
+    }
+
 }
