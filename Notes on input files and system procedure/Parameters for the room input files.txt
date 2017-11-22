@@ -1,6 +1,6 @@
 n = Number of rooms 
 
-R0	-----|
+R0		 |
 		 |
 R1		 |
 		 |
@@ -16,7 +16,7 @@ R6		 |
 		 |
 ...		 |
 		 |
-Rn	-----|
+Rn		 |
 
 Linked list, vector, or dynamic array work just fine for these, suggest doing Linked List or vector, just so we don't have to dwell into pointer memory leakage territory
 
