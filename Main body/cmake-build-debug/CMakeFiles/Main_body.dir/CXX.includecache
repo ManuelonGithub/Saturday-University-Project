@@ -1,0 +1,134 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp
+iostream
+-
+vector
+-
+systemINI.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.h
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.h
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.h
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.cpp
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+list
+-
+sstream
+-
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.h
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+list
+-
+sstream
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.cpp
+iostream
+-
+string
+-
+vector
+-
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.h
+iostream
+-
+string
+-
+vector
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.cpp
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+list
+-
+sstream
+-
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.h
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+list
+-
+sstream
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.cpp
+iostream
+-
+fstream
+-
+vector
+-
+sstream
+-
+systemINI.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.h
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.h
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.h
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.h
+iostream
+-
+fstream
+-
+vector
+-
+sstream
+-
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.h
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.h
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.h
+

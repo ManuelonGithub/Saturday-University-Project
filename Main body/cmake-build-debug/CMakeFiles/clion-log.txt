@@ -1,0 +1,4 @@
+C:\Users\Manuel\.CLion2017.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug
