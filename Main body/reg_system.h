@@ -45,4 +45,6 @@ void students_ini(vector<student> &students, reg_system &s);
 
 void print_all_students(ostream &out, vector<student> &students);
 
+void clear_for_next_term(vector<course> &courses);
+
 #endif //MAIN_BODY_SYSTEM_H

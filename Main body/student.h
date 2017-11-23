@@ -8,11 +8,12 @@ using namespace std;
 #ifndef MAIN_BODY_STUDENT_H
 #define MAIN_BODY_STUDENT_H
 
-
 class student {
 private:
     int st_ID;
-    vector<string> completed_courses;
+    vector<string>completed_courses;
+    string scheduled_courses[2];
+    string selected_course;
     int terms_completed;
     bool graduated;
 
@@ -21,5 +22,7 @@ public:
     void term_completed();
     void graduation();
     void write(ostream &out) const;
+    void schedule(char t, string c);
+    void set_selected_course(string c);
 };
 #endif //MAIN_BODY_STUDENT_H

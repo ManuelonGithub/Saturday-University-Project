@@ -13,8 +13,9 @@ student::student(int s_ID, int t_c, bool g)
     graduated = g;
 }
 
-void student::term_completed()  { terms_completed++; }
-void student::graduation()      { graduated = true; }
+void student::term_completed()              { terms_completed++; }
+void student::graduation()                  { graduated = true; }
+void student::set_selected_course(string c) { selected_course = c; }
 
 void student::write(ostream &out) const
 {
@@ -33,9 +34,23 @@ void student::write(ostream &out) const
     }
     else
     {
-        for (const auto &i : completed_courses) {
-            out << i << ", ";
+        for(int i = 0; i < terms_completed; i++)
+        {
+                out << completed_courses[i];
         }
     }
     out << "\n\n";
+}
+
+void student::schedule(char t, string c)
+{
+    if(t == 'M' or 'm')
+    {
+        scheduled_courses[0] = c;
+    }
+
+    else if(t == 'A' or 'a')
+    {
+        scheduled_courses[1] = c;
+    }
 }
