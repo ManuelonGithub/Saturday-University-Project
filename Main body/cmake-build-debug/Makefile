@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake"
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body"
+CMAKE_SOURCE_DIR = "/home/manuel/Desktop/Saturday-University-Project/Main body"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-Universit
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+	"/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -70,7 +70,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,33 @@ course.cpp.s:
 	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/course.cpp.s
 .PHONY : course.cpp.s
 
+reg_system.o: reg_system.cpp.o
+
+.PHONY : reg_system.o
+
+# target to build an object file
+reg_system.cpp.o:
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.o
+.PHONY : reg_system.cpp.o
+
+reg_system.i: reg_system.cpp.i
+
+.PHONY : reg_system.i
+
+# target to preprocess a source file
+reg_system.cpp.i:
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.i
+.PHONY : reg_system.cpp.i
+
+reg_system.s: reg_system.cpp.s
+
+.PHONY : reg_system.s
+
+# target to generate assembly for a file
+reg_system.cpp.s:
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.s
+.PHONY : reg_system.cpp.s
+
 student.o: student.cpp.o
 
 .PHONY : student.o
@@ -231,33 +258,6 @@ student.cpp.s:
 	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/student.cpp.s
 .PHONY : student.cpp.s
 
-systemINI.o: systemINI.cpp.o
-
-.PHONY : systemINI.o
-
-# target to build an object file
-systemINI.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/systemINI.cpp.o
-.PHONY : systemINI.cpp.o
-
-systemINI.i: systemINI.cpp.i
-
-.PHONY : systemINI.i
-
-# target to preprocess a source file
-systemINI.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/systemINI.cpp.i
-.PHONY : systemINI.cpp.i
-
-systemINI.s: systemINI.cpp.s
-
-.PHONY : systemINI.s
-
-# target to generate assembly for a file
-systemINI.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/systemINI.cpp.s
-.PHONY : systemINI.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -276,12 +276,12 @@ help:
 	@echo "... course.o"
 	@echo "... course.i"
 	@echo "... course.s"
+	@echo "... reg_system.o"
+	@echo "... reg_system.i"
+	@echo "... reg_system.s"
 	@echo "... student.o"
 	@echo "... student.i"
 	@echo "... student.s"
-	@echo "... systemINI.o"
-	@echo "... systemINI.i"
-	@echo "... systemINI.s"
 .PHONY : help
 
 

@@ -3,15 +3,18 @@
 //
 
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <iomanip>
 #include "classroom.h"
-
 using namespace std;
 
-classroom::classroom(string r, int vac) { room = r;	vacancy = vac; }
+classroom::classroom(int r, int vac)
+{
+    string name = "R" + to_string(r);
+    room = name;
+    vacancy = vac;
+}
 
 void classroom::write(ostream &out) const
 {
-    out << "Room '" << room << "' :\n" << "\t" << "vacancy of " << vacancy << "\n";
+    out << "Room '" << room << "' -> " << "vacancy of " << vacancy << "\n";
 }

@@ -3,9 +3,6 @@
 //
 
 #include <iostream>
-#include <fstream>
-#include <string>
-
 using namespace std;
 
 #ifndef MAIN_BODY_CLASSROOM_H
@@ -17,7 +14,7 @@ private:
     int vacancy;
 
 public:
-    classroom(string r = " ", int vac = 0);
+    classroom(int r, int vac);
     void write(ostream &out) const;
 };
 

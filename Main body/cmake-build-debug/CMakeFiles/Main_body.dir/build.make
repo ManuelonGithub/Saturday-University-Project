@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake"
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body"
+CMAKE_SOURCE_DIR = "/home/manuel/Desktop/Saturday-University-Project/Main body"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Main_body.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Main_body.dir/flags.make
 
 CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o: CMakeFiles/Main_body.dir/flags.make
 CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o: ../Sat-Uni-Main-Body.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp"
 
 CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp" > CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp" > CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.i
 
 CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp" -o CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp" -o CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.s
 
 CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o.provides.build: CMakeFiles/Main
 
 CMakeFiles/Main_body.dir/course.cpp.o: CMakeFiles/Main_body.dir/flags.make
 CMakeFiles/Main_body.dir/course.cpp.o: ../course.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main_body.dir/course.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/course.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main_body.dir/course.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/course.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Main body/course.cpp"
 
 CMakeFiles/Main_body.dir/course.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main_body.dir/course.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.cpp" > CMakeFiles/Main_body.dir/course.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Main body/course.cpp" > CMakeFiles/Main_body.dir/course.cpp.i
 
 CMakeFiles/Main_body.dir/course.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main_body.dir/course.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.cpp" -o CMakeFiles/Main_body.dir/course.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Main body/course.cpp" -o CMakeFiles/Main_body.dir/course.cpp.s
 
 CMakeFiles/Main_body.dir/course.cpp.o.requires:
 
@@ -105,42 +105,18 @@ CMakeFiles/Main_body.dir/course.cpp.o.provides: CMakeFiles/Main_body.dir/course.
 CMakeFiles/Main_body.dir/course.cpp.o.provides.build: CMakeFiles/Main_body.dir/course.cpp.o
 
 
-CMakeFiles/Main_body.dir/systemINI.cpp.o: CMakeFiles/Main_body.dir/flags.make
-CMakeFiles/Main_body.dir/systemINI.cpp.o: ../systemINI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main_body.dir/systemINI.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/systemINI.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.cpp"
-
-CMakeFiles/Main_body.dir/systemINI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main_body.dir/systemINI.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.cpp" > CMakeFiles/Main_body.dir/systemINI.cpp.i
-
-CMakeFiles/Main_body.dir/systemINI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main_body.dir/systemINI.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.cpp" -o CMakeFiles/Main_body.dir/systemINI.cpp.s
-
-CMakeFiles/Main_body.dir/systemINI.cpp.o.requires:
-
-.PHONY : CMakeFiles/Main_body.dir/systemINI.cpp.o.requires
-
-CMakeFiles/Main_body.dir/systemINI.cpp.o.provides: CMakeFiles/Main_body.dir/systemINI.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/systemINI.cpp.o.provides.build
-.PHONY : CMakeFiles/Main_body.dir/systemINI.cpp.o.provides
-
-CMakeFiles/Main_body.dir/systemINI.cpp.o.provides.build: CMakeFiles/Main_body.dir/systemINI.cpp.o
-
-
 CMakeFiles/Main_body.dir/classroom.cpp.o: CMakeFiles/Main_body.dir/flags.make
 CMakeFiles/Main_body.dir/classroom.cpp.o: ../classroom.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main_body.dir/classroom.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/classroom.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main_body.dir/classroom.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/classroom.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Main body/classroom.cpp"
 
 CMakeFiles/Main_body.dir/classroom.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main_body.dir/classroom.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.cpp" > CMakeFiles/Main_body.dir/classroom.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Main body/classroom.cpp" > CMakeFiles/Main_body.dir/classroom.cpp.i
 
 CMakeFiles/Main_body.dir/classroom.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main_body.dir/classroom.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.cpp" -o CMakeFiles/Main_body.dir/classroom.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Main body/classroom.cpp" -o CMakeFiles/Main_body.dir/classroom.cpp.s
 
 CMakeFiles/Main_body.dir/classroom.cpp.o.requires:
 
@@ -155,16 +131,16 @@ CMakeFiles/Main_body.dir/classroom.cpp.o.provides.build: CMakeFiles/Main_body.di
 
 CMakeFiles/Main_body.dir/student.cpp.o: CMakeFiles/Main_body.dir/flags.make
 CMakeFiles/Main_body.dir/student.cpp.o: ../student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Main_body.dir/student.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/student.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main_body.dir/student.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/student.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Main body/student.cpp"
 
 CMakeFiles/Main_body.dir/student.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main_body.dir/student.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.cpp" > CMakeFiles/Main_body.dir/student.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Main body/student.cpp" > CMakeFiles/Main_body.dir/student.cpp.i
 
 CMakeFiles/Main_body.dir/student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main_body.dir/student.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.cpp" -o CMakeFiles/Main_body.dir/student.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Main body/student.cpp" -o CMakeFiles/Main_body.dir/student.cpp.s
 
 CMakeFiles/Main_body.dir/student.cpp.o.requires:
 
@@ -177,37 +153,61 @@ CMakeFiles/Main_body.dir/student.cpp.o.provides: CMakeFiles/Main_body.dir/studen
 CMakeFiles/Main_body.dir/student.cpp.o.provides.build: CMakeFiles/Main_body.dir/student.cpp.o
 
 
+CMakeFiles/Main_body.dir/reg_system.cpp.o: CMakeFiles/Main_body.dir/flags.make
+CMakeFiles/Main_body.dir/reg_system.cpp.o: ../reg_system.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Main_body.dir/reg_system.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main_body.dir/reg_system.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Main body/reg_system.cpp"
+
+CMakeFiles/Main_body.dir/reg_system.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main_body.dir/reg_system.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Main body/reg_system.cpp" > CMakeFiles/Main_body.dir/reg_system.cpp.i
+
+CMakeFiles/Main_body.dir/reg_system.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main_body.dir/reg_system.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Main body/reg_system.cpp" -o CMakeFiles/Main_body.dir/reg_system.cpp.s
+
+CMakeFiles/Main_body.dir/reg_system.cpp.o.requires:
+
+.PHONY : CMakeFiles/Main_body.dir/reg_system.cpp.o.requires
+
+CMakeFiles/Main_body.dir/reg_system.cpp.o.provides: CMakeFiles/Main_body.dir/reg_system.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.o.provides.build
+.PHONY : CMakeFiles/Main_body.dir/reg_system.cpp.o.provides
+
+CMakeFiles/Main_body.dir/reg_system.cpp.o.provides.build: CMakeFiles/Main_body.dir/reg_system.cpp.o
+
+
 # Object files for target Main_body
 Main_body_OBJECTS = \
 "CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o" \
 "CMakeFiles/Main_body.dir/course.cpp.o" \
-"CMakeFiles/Main_body.dir/systemINI.cpp.o" \
 "CMakeFiles/Main_body.dir/classroom.cpp.o" \
-"CMakeFiles/Main_body.dir/student.cpp.o"
+"CMakeFiles/Main_body.dir/student.cpp.o" \
+"CMakeFiles/Main_body.dir/reg_system.cpp.o"
 
 # External object files for target Main_body
 Main_body_EXTERNAL_OBJECTS =
 
-Main_body.exe: CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o
-Main_body.exe: CMakeFiles/Main_body.dir/course.cpp.o
-Main_body.exe: CMakeFiles/Main_body.dir/systemINI.cpp.o
-Main_body.exe: CMakeFiles/Main_body.dir/classroom.cpp.o
-Main_body.exe: CMakeFiles/Main_body.dir/student.cpp.o
-Main_body.exe: CMakeFiles/Main_body.dir/build.make
-Main_body.exe: CMakeFiles/Main_body.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Main_body.exe"
+Main_body: CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o
+Main_body: CMakeFiles/Main_body.dir/course.cpp.o
+Main_body: CMakeFiles/Main_body.dir/classroom.cpp.o
+Main_body: CMakeFiles/Main_body.dir/student.cpp.o
+Main_body: CMakeFiles/Main_body.dir/reg_system.cpp.o
+Main_body: CMakeFiles/Main_body.dir/build.make
+Main_body: CMakeFiles/Main_body.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Main_body"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main_body.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Main_body.dir/build: Main_body.exe
+CMakeFiles/Main_body.dir/build: Main_body
 
 .PHONY : CMakeFiles/Main_body.dir/build
 
 CMakeFiles/Main_body.dir/requires: CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o.requires
 CMakeFiles/Main_body.dir/requires: CMakeFiles/Main_body.dir/course.cpp.o.requires
-CMakeFiles/Main_body.dir/requires: CMakeFiles/Main_body.dir/systemINI.cpp.o.requires
 CMakeFiles/Main_body.dir/requires: CMakeFiles/Main_body.dir/classroom.cpp.o.requires
 CMakeFiles/Main_body.dir/requires: CMakeFiles/Main_body.dir/student.cpp.o.requires
+CMakeFiles/Main_body.dir/requires: CMakeFiles/Main_body.dir/reg_system.cpp.o.requires
 
 .PHONY : CMakeFiles/Main_body.dir/requires
 
@@ -216,6 +216,6 @@ CMakeFiles/Main_body.dir/clean:
 .PHONY : CMakeFiles/Main_body.dir/clean
 
 CMakeFiles/Main_body.dir/depend:
-	cd "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/manuel/Desktop/Saturday-University-Project/Main body" "/home/manuel/Desktop/Saturday-University-Project/Main body" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Main_body.dir/depend
 

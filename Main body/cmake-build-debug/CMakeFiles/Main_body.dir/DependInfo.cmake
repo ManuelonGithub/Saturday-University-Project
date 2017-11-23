@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o"
-  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/classroom.cpp.o"
-  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/course.cpp.o"
-  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/student.cpp.o"
-  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/systemINI.cpp.o"
+  "/home/manuel/Desktop/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o"
+  "/home/manuel/Desktop/Saturday-University-Project/Main body/classroom.cpp" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/classroom.cpp.o"
+  "/home/manuel/Desktop/Saturday-University-Project/Main body/course.cpp" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/course.cpp.o"
+  "/home/manuel/Desktop/Saturday-University-Project/Main body/reg_system.cpp" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/reg_system.cpp.o"
+  "/home/manuel/Desktop/Saturday-University-Project/Main body/student.cpp" "/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir/student.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

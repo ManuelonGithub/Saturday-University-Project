@@ -8,106 +8,110 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"/>
+				<Option working_dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"/>
+				<Option working_dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"/>
+				<Option working_dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Main_body">
-				<Option output="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/Main_body.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"/>
+				<Option output="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/Main_body" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main_body"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main_body"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Main_body/fast">
-				<Option output="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug/Main_body.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/cmake-build-debug"/>
+				<Option output="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/Main_body" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main_body/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main_body/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/manuel/Desktop/Saturday-University-Project/Main\ body/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/Sat-Uni-Main-Body.cpp">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.cpp">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/classroom.cpp">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/classroom.h">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/classroom.h">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.cpp">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/course.cpp">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/course.h">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/course.h">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.cpp">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/reg_system.cpp">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/student.h">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/reg_system.h">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.cpp">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/student.cpp">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/systemINI.h">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/student.h">
 			<Option target="Main_body"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Main body/CMakeLists.txt">
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Main body/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
