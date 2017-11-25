@@ -123,7 +123,7 @@ void classrooms_read(string Filepath, vector<classroom> &classrooms, reg_system 
         {
             rn = i;
             rooms_in >> vac;
-            classrooms.push_back(classroom(rn, vac));
+            classrooms.emplace_back(rn, vac);
         }
     }
 }
@@ -140,7 +140,7 @@ void students_ini(vector<student> &students, reg_system &s)
 {
     for(int i = 1; i <= s.students(); i++)
     {
-        students.push_back(student(i));
+        students.emplace_back(i);
     }
 }
 
@@ -149,5 +149,13 @@ void print_all_students(ostream &out, vector<student> &students)
     for(int i=0; i < students.size(); i++)
     {
         students[i].write(out);
+    }
+}
+
+void clear_for_next_term(vector<course> &courses)
+{
+    for(int i = 0; i < courses.size(); i++)
+    {
+        courses[i].clear_sch();
     }
 }
