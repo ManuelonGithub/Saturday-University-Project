@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Main_body.dir/classroom.cpp.o"
   "CMakeFiles/Main_body.dir/student.cpp.o"
   "CMakeFiles/Main_body.dir/reg_system.cpp.o"
+  "CMakeFiles/Main_body.dir/term_operations.cpp.o"
   "Main_body.pdb"
   "Main_body"
 )

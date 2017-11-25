@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/course.cpp.o"
   "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/reg_system.cpp.o"
   "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/student.cpp.o"
+  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/term_operations.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

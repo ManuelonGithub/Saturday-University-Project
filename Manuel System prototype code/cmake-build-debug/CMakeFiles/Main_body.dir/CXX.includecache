@@ -7,10 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/Sat-Uni-Main-Body.cpp
-iostream
--
-vector
--
 course.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
 classroom.h
@@ -19,11 +15,13 @@ student.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h
 reg_system.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.h
+term_operations.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h
 
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.cpp
-iostream
--
 iomanip
+-
+fstream
 -
 classroom.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
@@ -31,11 +29,15 @@ classroom.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
 iostream
 -
+vector
+-
 
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.cpp
-iostream
+iomanip
 -
-vector
+fstream
+-
+sstream
 -
 course.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
@@ -61,16 +63,8 @@ reg_system.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.h
 iostream
 -
-course.h
-/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
-classroom.h
-/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
-student.h
-/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h
 
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.cpp
-iostream
--
 iomanip
 -
 student.h
@@ -85,4 +79,18 @@ vector
 -
 course.h
 /home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.cpp
+fstream
+-
+iomanip
+-
+term_operations.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h
+course.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+classroom.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
 

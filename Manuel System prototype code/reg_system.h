@@ -3,10 +3,6 @@
 //
 
 #include <iostream>
-#include "course.h"
-#include "classroom.h"
-#include "student.h"
-
 using namespace std;
 
 #ifndef MAIN_BODY_SYSTEM_H
@@ -33,18 +29,6 @@ public:
     void classrooms(int r);
 };
 
-void courses_read(string Filepath, vector<course> &courses, reg_system &s);
-
-void print_all_courses(ostream &out, vector<course> c);
-
-void classrooms_read(string Filepath, vector<classroom> &classrooms, reg_system &s);
-
-void print_all_classrooms(ostream &out, vector<classroom> c);
-
-void students_ini(vector<student> &students, reg_system &s);
-
-void print_all_students(ostream &out, vector<student> &students);
-
-void clear_for_next_term(vector<course> &courses);
+//void clear_for_next_term(vector<course> &courses);
 
 #endif //MAIN_BODY_SYSTEM_H

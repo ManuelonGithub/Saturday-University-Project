@@ -111,6 +111,12 @@
 		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h">
 			<Option target="Main_body"/>
 		</Unit>
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.cpp">
+			<Option target="Main_body"/>
+		</Unit>
+		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h">
+			<Option target="Main_body"/>
+		</Unit>
 		<Unit filename="/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

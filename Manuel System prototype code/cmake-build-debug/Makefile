@@ -258,6 +258,33 @@ student.cpp.s:
 	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/student.cpp.s
 .PHONY : student.cpp.s
 
+term_operations.o: term_operations.cpp.o
+
+.PHONY : term_operations.o
+
+# target to build an object file
+term_operations.cpp.o:
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/term_operations.cpp.o
+.PHONY : term_operations.cpp.o
+
+term_operations.i: term_operations.cpp.i
+
+.PHONY : term_operations.i
+
+# target to preprocess a source file
+term_operations.cpp.i:
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/term_operations.cpp.i
+.PHONY : term_operations.cpp.i
+
+term_operations.s: term_operations.cpp.s
+
+.PHONY : term_operations.s
+
+# target to generate assembly for a file
+term_operations.cpp.s:
+	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/term_operations.cpp.s
+.PHONY : term_operations.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... student.o"
 	@echo "... student.i"
 	@echo "... student.s"
+	@echo "... term_operations.o"
+	@echo "... term_operations.i"
+	@echo "... term_operations.s"
 .PHONY : help
 
 

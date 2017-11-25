@@ -4,7 +4,6 @@
 
 #include <fstream>
 #include <iomanip>
-#include <sstream>
 #include "reg_system.h"
 
 void reg_system::create(string Filename)
@@ -26,6 +25,8 @@ void reg_system::create(string Filename)
         sys_par_in >> Term_to_Sample;
         sys_par_in >> Student_to_Sample;
     }
+
+    sys_par_in.close();
 }
 
 void reg_system::write(ostream &out) const
@@ -46,112 +47,7 @@ int reg_system::Sample_Term()       { return Term_to_Sample; }
 int reg_system::Sample_Student()    { return Student_to_Sample; }
 void reg_system::classrooms(int r)  { total_classrooms = r; }
 
-void courses_read(string Filepath, vector<course> &courses, reg_system &s)
-{
-    course *c;
-    string str;
-    int total_courses_given;
-    ifstream courses_in;
-
-    courses_in.open(Filepath.c_str());
-
-    if(!courses_in)
-    {
-        cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
-        exit(1);
-    }
-    else
-    {
-        getline(courses_in, str);
-
-        total_courses_given = stoi(str);
-        if(total_courses_given != s.courses())
-        {
-            cout << "ERROR: Total courses in course file (" << total_courses_given << ") ";
-            cout << "doesn't match the total courses established by the system parameter file (" << s.courses() << ")";
-            cout << "\n";
-
-            exit(1);
-        }
-
-        while(getline(courses_in, str))
-        {
-            istringstream ss(str);
-            string id;
-
-            ss >> id;
-            c = new course(id);
-
-            while(ss >> id)
-            {
-                c->set_pre_req(id);
-            }
-
-            courses.push_back(*c);
-        }
-    }
-
-}
-
-void print_all_courses(ostream &out, vector<course> c)
-{
-    for(int i = 0; i < c.size(); i++)
-    {
-        c[i].write(out);
-    }
-}
-
-void classrooms_read(string Filepath, vector<classroom> &classrooms, reg_system &s)
-{
-    ifstream rooms_in;
-    int vac, r, rn;
-
-    rooms_in.open(Filepath.c_str());
-
-    if(!rooms_in)
-    {
-        cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
-        exit(1);
-    }
-    else
-    {
-        rooms_in >> r;
-
-        s.classrooms(r);
-
-        for(int i = 0; i <= r; i++)
-        {
-            rn = i;
-            rooms_in >> vac;
-            classrooms.emplace_back(rn, vac);
-        }
-    }
-}
-
-void print_all_classrooms(ostream &out, vector<classroom> c)
-{
-    for(int i = 0; i < c.size(); i++)
-    {
-        c[i].write(out);
-    }
-}
-
-void students_ini(vector<student> &students, reg_system &s)
-{
-    for(int i = 1; i <= s.students(); i++)
-    {
-        students.emplace_back(i);
-    }
-}
-
-void print_all_students(ostream &out, vector<student> &students)
-{
-    for(int i=0; i < students.size(); i++)
-    {
-        students[i].write(out);
-    }
-}
-
+/*
 void clear_for_next_term(vector<course> &courses)
 {
     for(int i = 0; i < courses.size(); i++)
@@ -159,3 +55,4 @@ void clear_for_next_term(vector<course> &courses)
         courses[i].clear_sch();
     }
 }
+ */
