@@ -8,9 +8,11 @@
 
 using namespace std;
 
-course::course(string cID, bool scheduled) { courseID = cID; }
-
-void course::set_pre_req(string const id) { pre_req.push_back(id);}
+course::course(string cID, bool scheduled)  { courseID = cID; }
+void course::set_pre_req(string const id)   { pre_req.push_back(id);}
+string course::ID_getter(void)              { return courseID; }
+string course::getPreReq(int k)             { return pre_req[k]; }
+int course::getSizePreReq(void)             { return pre_req.size(); }
 
 void course::write(ostream &out) const
 {
@@ -42,17 +44,3 @@ void course::clear_sch()
     time = ' ';
 }
 
-string course::ID_getter(void) 
-{
-	return courseID;
-}
-
-string course::getPreReq(int k)
-{
-	return pre_req[k];
-}
-
-int course::getSizePreReq(void)
-{
-	return pre_req.size();	
-}

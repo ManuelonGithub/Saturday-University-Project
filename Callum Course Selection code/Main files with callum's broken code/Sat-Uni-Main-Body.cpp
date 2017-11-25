@@ -22,18 +22,18 @@ int main()
 
     //print_all_courses(cout, courses);
 
-    //classrooms_read("classrooms.txt", classrooms, sys);
+    classrooms_read("classrooms.txt", classrooms, sys);
 
-    //print_all_classrooms(cout, classrooms);
+    print_all_classrooms(cout, classrooms);
 
-    students_ini(students, sys);
+    //students_ini(students, sys);
 
-    print_all_students(cout, students);
+    //print_all_students(cout, students);
 
 	//Request a course from the Faculty Of Undergraduate Studies
-	
-	for (int i=0; i < students.size(); i++) {
-		FUS[i] = students[i].bestChoice[i];
+	for (int i=0; i < students.size(); i++) 
+	{
+		FUS[i] = students[i].bestChoice(courses);
 	}
 	
     return 0;
