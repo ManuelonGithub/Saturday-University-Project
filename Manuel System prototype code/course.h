@@ -25,7 +25,7 @@ public:
     void scheduling(char t);
     void clear_sch();
     string ID_getter(void);
-    string preReq_getter(int k);
+    string getPreReq(int k);
     int getSizePreReq(void);
 };
 
