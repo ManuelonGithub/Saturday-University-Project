@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 #ifndef MAIN_BODY_CLASSROOM_H
@@ -10,12 +11,17 @@ using namespace std;
 
 class classroom{
 private:
-    string room;
+    string room_name;
     int vacancy;
 
 public:
     classroom(int r, int vac);
     void write(ostream &out) const;
+    string get_room();
 };
+
+void classrooms_read(string Filepath, vector<classroom> &classrooms);
+
+void print_all_classrooms(ostream &out, vector<classroom> c);
 
 #endif //MAIN_BODY_CLASSROOM_H

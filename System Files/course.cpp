@@ -1,146 +1,113 @@
 //
 // Created by Manuel on 22/11/2017.
 //
-
-#include <iostream>
-#include <vector>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
 #include "course.h"
 
-using namespace std;
-
-course::course(string cID, bool scheduled)  { courseID = cID; }
+course::course(string cID, bool scheduled)
+{
+    courseID = cID;
+    type = courseID[0];
+}
 void course::set_pre_req(string const id)   { pre_req.push_back(id);}
-string course::ID_getter(void)              { return courseID; }
-string course::getPreReq(int k)             { return pre_req[k]; }
-int course::getSizePreReq(void)             { return pre_req.size(); }
+string course::get_PreReq(int k)            { return pre_req[k]; }
+char course::course_time()                  { return time; }
+string course::get_ID()                     { return courseID; }
+bool course::is_scheduled()                 { return scheduled; }
+string course::get_room()                   { return classroom; }
+void course::set_room(string room)          { classroom = room; }
 
 void course::write(ostream &out) const
 {
     out << courseID << ": " << "\n";
+
     if(!pre_req.empty()) {
-        out << "\tpre-requisite courses: ";
+        out << setw(27) <<"pre-requisite courses: ";
         for (const auto &i : pre_req) {
             out << i << ", ";
         }
         out << "\n";
     }
     else  {
-        out << "\tNo pre-requisite courses \n";
+        out << setw(29) << "No pre-requisite courses\n";
     }
 
-}
-
-void course::scheduling(char t)
-{
-    if (t == 'M' or 'A' or 'm' or 'a') {
-        time = t;
-        Scheduled = true;
+    out << setw(17) << "Course Type: ";
+    if(type == 'c') {
+        out << "Core ";
     }
-}
-
-void course::clear_sch()
-{
-    Scheduled = false;
-    time = ' ';
-}
-
-//
-// Created by Manuel on 22/11/2017.
-//
-#include <iostream>
-#include <iomanip>
-#include "student.h"
-
-#include <time.h>
-#include <cstdlib>
-
-using namespace std;
-
-student::student(int s_ID, int t_c, bool g)
-{
-    st_ID = s_ID;
-    terms_completed = t_c;
-    graduated = g;
-}
-
-void student::term_completed() 				{ terms_completed++; }
-void student::graduation() 					{ graduated = true; }
-void student::set_selected_course(string c) { selected_course = c; }
-
-void student::write(ostream &out) const
-{
-    out << "Student " << "B" << st_ID << ": " << "\n";
-    out << setw(23) << "Graduated? ";
-    if(graduated) {
-        out << "Y";
-    }
-    else {
-        out<< "N";
-    }
-    out << "\n";
-    
-    out << setw(29) << "Terms Completed: " << terms_completed << "\n";
-    out << setw(31) << "Courses Completed: ";
-    
-    if(completed_courses.empty()) {
-        out << "None";
-    }
-    else {
-        for(int i = 0; i < terms_completed; i++)
-        {
-            out << completed_courses[i];
-        }
+    else if(type == 'e'){
+        out << "Elective";
     }
     out << "\n\n";
 }
 
-void student::schedule(char t, string c)
+void course::scheduling(char t)
 {
-    if(t == 'M' or 'm')  {
-        scheduled_courses[0] = c;
-    }
-    else if(t == 'A' or 'a') {
-        scheduled_courses[1] = c;
-    }
+    time = t;
+    scheduled = true;
 }
 
-string student :: bestChoice(vector<course> &available){
-    
-    int preReqDone;
-    vector<string> past; // the courses the student has gotten on each iteration of the FUS
-    vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
-    
-    
-    for (int i=0; i < available.size(); i++)
+void course::clear_sch()
+{
+    scheduled = false;
+    time = ' ';
+}
+
+void courses_read(string Filepath, vector<course> &courses, int sys_course_count)
+{
+    course *c;
+    string str;
+    int total_courses_given;
+    ifstream courses_in;
+
+    courses_in.open(Filepath.c_str());
+
+    if(!courses_in)
     {
-        preReqDone=0;
-        for (int k=0; k < completed_courses.size(); k++)
+        cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
+        exit(1);
+    }
+    else
+    {
+        getline(courses_in, str);
+
+        total_courses_given = stoi(str);
+        if(total_courses_given != sys_course_count)
         {
-            if (available[i].ID_getter() != completed_courses[k]) // if the student has course already, not an option
-            {
-                for (int h=0; h < available[i].getSizePreReq(); h++)
-                {
-                    if (available[i].getPreReq(h) == completed_courses[k])
-                    {
-                        preReqDone++; // number of prerequisites filled is increased
-                    }
-                }
-            }
+            cout << "ERROR: Total courses in course file (" << total_courses_given << ") ";
+            cout << "doesn't match the total courses established by the system parameter file (" << sys_course_count << ")";
+            cout << "\n";
+
+            exit(1);
         }
-        if (preReqDone >= available[i].getSizePreReq())
+
+        while(getline(courses_in, str))
         {
-            option.push_back(available[i]);
+            istringstream ss(str);
+            string id;
+
+            ss >> id;
+            c = new course(id);
+
+            while(ss >> id)
+            {
+                c->set_pre_req(id);
+            }
+
+            courses.push_back(*c);
         }
     }
-    
-    //Pick a random integer between 0 and number of option courses
-    int ran;
-    ran = rand() % option.size();
-    string bestChoice;	
-    bestChoice = option[ran].ID_getter();
-    past.push_back(bestChoice);//Storing the student's wish for each iteration
-    
-    cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
-    return bestChoice;
+
+    courses_in.close();
 }
 
+void print_all_courses(ostream &out, vector<course> c)
+{
+    for(int i = 0; i < c.size(); i++)
+    {
+        c[i].write(out);
+    }
+}

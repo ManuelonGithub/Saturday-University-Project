@@ -1,76 +1,61 @@
-<<<<<<< HEAD:System Files/Sat-Uni-Main-Body.cpp
-#include <iostream>
-#include <vector>
 #include "course.h"
 #include "classroom.h"
 #include "student.h"
 #include "reg_system.h"
-
-using namespace std;
+#include "term_operations.h"
 
 int main()
 {
-    reg_system sys;
+    reg_system sys{};
     vector<course> courses;
     vector<classroom> classrooms;
     vector<student> students;
-    vector<string> FUS;
-    
+
     sys.create("system-parameters-in.txt");
-    
+
     //sys.write(cout);
-    
-    courses_read("courses.txt", courses, sys);
-    
-    
+
+    courses_read("courses.txt", courses, sys.courses());
+
     //print_all_courses(cout, courses);
-    
-    //classrooms_read("classrooms.txt", classrooms, sys);
-    
+
+    classrooms_read("classrooms.txt", classrooms);
+
     //print_all_classrooms(cout, classrooms);
-    
-    students_ini(students, sys);
-    
+
+    students_ini(students, sys.students());
+
+    time_table_creation_test_1(courses, classrooms);
+
+    time_table_print(courses, sys.terms_to_process());
+
+
+
+
     //print_all_students(cout, students);
-    
-    for (int i = 0; i < 20; i++) {
-        FUS.push_back(students[i].bestChoice(courses));
-    }
-    return 0;
-}
-=======
-#include <iostream>
-#include <vector>
-#include "course.h"
-#include "classroom.h"
-#include "student.h"
-#include "reg_system.h"
 
-using namespace std;
+	//for(int i = 0; i < sys.terms_to_process(); i++){
 
-int main()
-{
-    reg_system sys;
-    vector<course> courses;
-    vector<classroom> classrooms;
-    vector<student> students;
+        // while( !reg_n_sched_complete):
 
-    sys.create("system-parameters-in.txt");
+            // Course Selection  - done^TM
 
-    //sys.write(cout);
+            // Sample student course selection print - not done
 
-    //courses_read("courses.txt", courses, sys);
+            // Course Scheduling - done^TM
 
-    //print_all_courses(cout, courses);
+        // Building manager duties - done^TM
 
-    //classrooms_read("classrooms.txt", classrooms, sys);
+        // Term time table print - DONE
 
-    //print_all_classrooms(cout, classrooms);
+        // tuition processing - not done (callum)
 
-    students_ini(students, sys);
+        // courses taking by student during the term (must be sorted according to the number of taken courses in the semester) - not done
 
-    print_all_students(cout, students);
+        // term_completed() - not done
+
+        // Graduated student by this term - not done
+    //}
 
     return 0;
 }
->>>>>>> d7515b1b0b40a197132c94a94e8f97b9544ca37c:Main body/Sat-Uni-Main-Body.cpp
