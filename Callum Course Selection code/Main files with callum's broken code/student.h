@@ -26,6 +26,9 @@ public:
     void write(ostream &out) const;
     void schedule(char t, string c);
     void set_selected_course(string c);
+<<<<<<< HEAD:Callum Course Selection code/Main files with callum's broken code/student.h
     string bestChoice(vector<course> &in);
+=======
+>>>>>>> d7515b1b0b40a197132c94a94e8f97b9544ca37c:Main body/student.h
 };
 #endif //MAIN_BODY_STUDENT_H
