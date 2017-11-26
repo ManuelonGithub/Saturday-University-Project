@@ -21,7 +21,7 @@ int main()
 
     classrooms_read("classrooms.txt", classrooms);
 
-    print_all_classrooms(cout, classrooms);
+    //print_all_classrooms(cout, classrooms);
 
     students_ini(students, sys.students());
 
@@ -48,7 +48,7 @@ int main()
 
         // Term time table print - DONE
 
-        // tuition processing - not done (ibrah)
+        // tuition processing - not done (callum)
 
         // courses taking by student during the term (must be sorted according to the number of taken courses in the semester) - not done
 

@@ -8,7 +8,7 @@
 
 void time_table_print(vector<course> &courses, int t)
 {
-    string term = "Term " + to_string((t+1)) + " Time Table";
+    string term = "Term " + to_string((t+1)) + " Time Table.txt";
     ofstream fileout;
     fileout.open(term.c_str());
 

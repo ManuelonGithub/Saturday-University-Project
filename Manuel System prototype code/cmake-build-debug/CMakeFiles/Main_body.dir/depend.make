@@ -23,6 +23,7 @@ CMakeFiles/Main_body.dir/student.cpp.o: ../student.h
 
 CMakeFiles/Main_body.dir/term_operations.cpp.o: ../classroom.h
 CMakeFiles/Main_body.dir/term_operations.cpp.o: ../course.h
+CMakeFiles/Main_body.dir/term_operations.cpp.o: ../student.h
 CMakeFiles/Main_body.dir/term_operations.cpp.o: ../term_operations.cpp
 CMakeFiles/Main_body.dir/term_operations.cpp.o: ../term_operations.h
 

@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/Sat-Uni-Main-Body.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o"
-  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/classroom.cpp.o"
-  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/course.cpp.o"
-  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/reg_system.cpp.o"
-  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/student.cpp.o"
-  "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.cpp" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/term_operations.cpp.o"
+  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/Sat-Uni-Main-Body.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o"
+  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/classroom.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/classroom.cpp.o"
+  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/course.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/course.cpp.o"
+  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/reg_system.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/reg_system.cpp.o"
+  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/student.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/student.cpp.o"
+  "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/term_operations.cpp" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Main_body.dir/term_operations.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
