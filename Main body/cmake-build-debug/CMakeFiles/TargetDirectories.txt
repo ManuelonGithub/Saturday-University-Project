@@ -1,3 +1,0 @@
-/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/manuel/Desktop/Saturday-University-Project/Main body/cmake-build-debug/CMakeFiles/Main_body.dir

@@ -1,0 +1,14 @@
+Term 13 Time Table.txt
+
+Course ID: c1 - Room: R0 - Course time: Morning
+
+Course ID: c2 - Room: R1 - Course time: Afternoon
+
+Course ID: c3 - Room: R2 - Course time: Morning
+
+Course ID: e1 - Room: R3 - Course time: Afternoon
+
+Course ID: e2 - Room: R4 - Course time: Morning
+
+Course ID: e3 - Room: R5 - Course time: Afternoon
+
