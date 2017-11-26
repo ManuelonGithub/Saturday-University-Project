@@ -54,9 +54,9 @@ void student::schedule(char t, string c)
 	}
 }
 
-string student :: bestChoice(vector<course> &available){
+string student :: bestChoice(vector<course> &available){ //take courses from main as argument
 
-	int preReqDone;
+    int preReqDone;
 	vector<string> past; // the courses the student has gotten on each iteration of the FUS
 	vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
 
@@ -65,7 +65,7 @@ string student :: bestChoice(vector<course> &available){
 		preReqDone=0;
 		for (int k=0; k < completed_courses.size(); k++)
 		{
-			if (available[i].get_ID() != completed_courses[k]) // if the student has course already, not an option
+			if ((available[i].get_ID() != completed_courses[k]) &&(available[i].is_scheduled()==false)) // if the student has course already, not an option
 			{
 				for (int h=0; h < available[i].getSizePreReq(); h++)
 				{
@@ -89,7 +89,7 @@ string student :: bestChoice(vector<course> &available){
 	bestChoice = option[ran].get_ID();
 	past.push_back(bestChoice);//Storing the student's wish for each iteration
 
-	cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
+	//cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
 	return bestChoice;
 }
 

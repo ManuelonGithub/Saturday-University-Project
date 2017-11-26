@@ -10,7 +10,8 @@ int main()
     vector<classroom> classrooms;
     vector<student> students;
     vector<string> FUS;
-
+    int iteration=0, i;
+    
     sys.create("system-parameters-in.txt");
 
     //sys.write(cout);
@@ -29,10 +30,19 @@ int main()
 
     //time_table_print(courses, sys.terms_to_process());
 
-    for (int i = 0; i < students.size(); i++) {
-        FUS.push_back(students[i].bestChoice(courses));
+    iteration = classrooms.size() - 1;
+    
+    cout<< iteration;
+    iteration = iteration*2;
+    
+    for (int k = 0; k < iteration; k++){
+        FUS.clear();
+        for (i=0; i < students.size(); i++) {
+        FUS.push_back(students[i].bestChoice(courses)); //courses == availabe
     }
-
+    
+    Scheduler(FUS, courses);//courses == &total
+    }
 	//for(int i = 0; i < sys.terms_to_process(); i++){
 
         // while( !reg_n_sched_complete):

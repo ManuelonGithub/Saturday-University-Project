@@ -15,7 +15,7 @@ void course::set_pre_req(string const id)   { pre_req.push_back(id);}
 void course::set_room(string room)          { classroom = room; }
 bool course::is_scheduled()                 { return scheduled; }
 char course::course_time()                  { return time; }
-int course::getSizePreReq(void)             { return pre_req.size(); }
+int  course::getSizePreReq(void)            { return pre_req.size(); }
 string course::get_room()                   { return classroom; }
 string course::get_ID()                     { return courseID; }
 string course::get_pre_req(int k)            { return pre_req[k]; }
@@ -50,6 +50,7 @@ void course::scheduling(char t)
 {
     time = t;
     scheduled = true;
+    cout << "The course " << courseID << " just got scheduled in the " << time << endl;
 }
 
 void course::clear_sch()
@@ -113,3 +114,38 @@ void print_all_courses(ostream &out, vector<course> c)
         c[i].write(out);
     }
 }
+
+
+
+void Scheduler(vector<string> &FUS, vector<course> &total){
+    
+    int count[total.size()];
+    
+    for (int i=0; i < total.size(); i++){ //initialize count
+        count[i]=0;
+        cout<< count[i] <<endl;
+    }
+    
+    for(int i=0;i<FUS.size();i++){
+        for(int j=0;j < total.size();j++){
+            if(FUS[i]==total[j].get_ID()){
+                count[j]= count[j] + 1; // course gets a count
+            }
+        }
+    }
+    cout << FUS.size() << endl;
+    for (int j=0; j < total.size(); j++){ // finds course with most wishes
+        cout<< "The course " << total[j].get_ID() <<" has this many students wishing for it:" << count[j]<<endl;
+    }
+    int max=0;
+    int chosen=0;
+    for(int i=0;i<total.size();i++){
+        if(count[i]>max){
+            max=count[i];
+            chosen=i;
+        }
+    }
+    total[chosen].scheduling('m');
+    
+}
+
