@@ -44,3 +44,15 @@ void time_table_creation_test_1(vector<course> &courses, vector<classroom> &clas
         courses[i].set_room(classrooms[i].get_room());
     }
 }
+
+
+int calculateTuition(vector<course> &term) {
+    int tuition=0; // new term, reset tuition
+    vector<int> tuitionHistory; // This will hold the tuition paid at each term
+    for (int i=0; i < term.size(); i++){
+        if(term[i].is_scheduled())
+            tuition++;
+    }
+    tuitionHistory.push_back(tuition);
+    return tuition; // Is this value 0, 1, or 2 always?
+}

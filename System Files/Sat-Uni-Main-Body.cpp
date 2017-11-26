@@ -3,7 +3,6 @@
 #include "student.h"
 #include "reg_system.h"
 #include "term_operations.h"
-
 int main()
 {
     reg_system sys{};
@@ -30,7 +29,7 @@ int main()
 
     //time_table_print(courses, sys.terms_to_process());
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < students.size(); i++) {
         FUS.push_back(students[i].bestChoice(courses));
     }
 
@@ -49,7 +48,9 @@ int main()
         // Term time table print - DONE
 
         // tuition processing - not done (callum)
-
+    
+       //  tution = calculateTuition(courses);
+    
         // courses taking by student during the term (must be sorted according to the number of taken courses in the semester) - not done
 
         // term_completed() - not done

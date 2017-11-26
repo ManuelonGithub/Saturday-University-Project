@@ -13,3 +13,4 @@
 
 void time_table_print(vector<course> &courses, int t);
 void time_table_creation_test_1(vector<course> &courses, vector<classroom> &classrooms);
+int calculateTuition(vector<course> &term);
