@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "course.h"
+
 using namespace std;
 
 #ifndef MAIN_BODY_STUDENT_H
@@ -26,11 +27,5 @@ public:
     void schedule(char t, string c);
     void set_selected_course(string c);
     string bestChoice(vector<course> &in);
-    int get_id();
 };
-
-void students_ini(vector<student> &students, int student_count);
-
-void print_all_students(ostream &out, vector<student> &students);
-
 #endif //MAIN_BODY_STUDENT_H

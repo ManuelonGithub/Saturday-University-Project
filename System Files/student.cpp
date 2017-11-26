@@ -1,12 +1,9 @@
 //
 // Created by Manuel on 22/11/2017.
 //
-#include <iostream>
 #include <iomanip>
 #include "student.h"
 #include <ctime>
-
-using namespace std;
 
 student::student(int s_ID, int t_c, bool g)
 {
@@ -18,6 +15,7 @@ student::student(int s_ID, int t_c, bool g)
 void student::term_completed() 				{ terms_completed++; }
 void student::graduation() 					{ graduated = true; }
 void student::set_selected_course(string c) { selected_course = c; }
+int student::get_id()                       { return st_ID; }
 
 void student::write(ostream &out) const
 {
@@ -53,5 +51,60 @@ void student::schedule(char t, string c)
 	}
 	else if(t == 'A' or 'a') {
 		scheduled_courses[1] = c;
+	}
+}
+
+string student :: bestChoice(vector<course> &available){
+
+	int preReqDone;
+	vector<string> past; // the courses the student has gotten on each iteration of the FUS
+	vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
+
+	for (int i=0; i < available.size(); i++)
+	{
+		preReqDone=0;
+		for (int k=0; k < completed_courses.size(); k++)
+		{
+			if (available[i].get_ID() != completed_courses[k]) // if the student has course already, not an option
+			{
+				for (int h=0; h < available[i].getSizePreReq(); h++)
+				{
+					if (available[i].get_pre_req(h) == completed_courses[k])
+					{
+						preReqDone++; // number of prerequisites filled is increased
+					}
+				}
+			}
+		}
+		if (preReqDone >= available[i].getSizePreReq())
+		{
+			option.push_back(available[i]);
+		}
+	}
+
+	//Pick a random integer between 0 and number of option courses
+	int ran;
+	ran = rand() % option.size();
+	string bestChoice;
+	bestChoice = option[ran].get_ID();
+	past.push_back(bestChoice);//Storing the student's wish for each iteration
+
+	cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
+	return bestChoice;
+}
+
+void students_ini(vector<student> &students, int student_count)
+{
+	for(int i = 1; i <= student_count; i++)
+	{
+		students.emplace_back(i);
+	}
+}
+
+void print_all_students(ostream &out, vector<student> &students)
+{
+	for(int i=0; i < students.size(); i++)
+	{
+		students[i].write(out);
 	}
 }
