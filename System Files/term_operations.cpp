@@ -94,9 +94,17 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
     
     for (int i=0; i < students.size(); i++){
         if (total[chosen].get_ID() == FUS[i]){
-            cout << "Student B" << students[i].get_id()<<" will take course " << total[chosen].get_ID() << "in the " << time << endl;
+            //cout << "Student B" << students[i].get_id()<<" will take course " << total[chosen].get_ID() << "in the " << time << endl;
             students[i].schedule(time, total[chosen].get_ID()) ; // give the student the course at the specified time
         }
 }
+}
+
+void print_attendance(vector<string> &FUS, vector<course> &total,int timing, vector<student> &students) {
+    cout << "Student       Courses taken" <<endl;
+    for (int i=0; i < students.size(); i++){
+        cout << "B" << students[i].get_id() << "               " << students[i].attendance(0) << ","<< students[i].attendance(1)<<endl;
+      
+    }
 }
 

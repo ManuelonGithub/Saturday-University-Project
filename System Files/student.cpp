@@ -17,7 +17,7 @@ void student::term_completed() 				{ terms_completed++; }
 void student::graduation() 					{ graduated = true; }
 void student::set_selected_course(string c) { selected_course = c; }
 int student::get_id()                       { return st_ID; }
-void student::course_complete(string c)      {completed_courses.push_back(c);}
+string student::attendance(int i)           { return scheduled_courses[i];}
 
 void student::write(ostream &out) const
 {
@@ -48,10 +48,10 @@ void student::write(ostream &out) const
 
 void student::schedule(char t, string c)
 {
-	if(t == 'M' or 'm')  {
+    if(t == 'm')  {
 		scheduled_courses[0] = c;
 	}
-	else if(t == 'A' or 'a') {
+	if(t == 'a') {
 		scheduled_courses[1] = c;
 	}
     completed_courses.push_back(c);}

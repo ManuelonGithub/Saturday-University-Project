@@ -35,8 +35,9 @@ int main()
     
     iteration = iteration*2; // morning and afternoon iterations
     
-    for (int k = 0; k < iteration; k++)
+    for (int k = 1; k <= iteration; k++)
     {
+        cout << "Iteration number: " << k << endl;
         FUS.clear();
         for (i=0; i < students.size(); i++)
         {
@@ -45,7 +46,7 @@ int main()
         }
         timing= timing * -1; //morning/afternoon toggler
         Scheduler(FUS, courses, timing, students);//Determine what class should be scheduled and when
-        
+        print_attendance(FUS, courses, timing, students);
     }
     
     
