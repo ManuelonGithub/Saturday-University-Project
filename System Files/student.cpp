@@ -57,6 +57,7 @@ void student::schedule(char t, string c)
 string student :: bestChoice(vector<course> &available){ //take courses from main as argument
 
     int preReqDone;
+    string noChoice = "No course works for this sad, sorry student";
 	vector<string> past; // the courses the student has gotten on each iteration of the FUS
 	vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
 
@@ -65,7 +66,7 @@ string student :: bestChoice(vector<course> &available){ //take courses from mai
 		preReqDone=0;
 		for (int k=0; k < completed_courses.size(); k++)
 		{
-			if ((available[i].get_ID() != completed_courses[k]) &&(available[i].is_scheduled()==false)) // if the student has course already, not an option
+			if ((available[i].get_ID() != completed_courses[k]) && (available[i].is_scheduled()==false)) // if the student has course already, not an option
 			{
 				for (int h=0; h < available[i].getSizePreReq(); h++)
 				{
@@ -76,21 +77,27 @@ string student :: bestChoice(vector<course> &available){ //take courses from mai
 				}
 			}
 		}
-		if (preReqDone >= available[i].getSizePreReq())
+		if ((preReqDone >= available[i].getSizePreReq()) && (available[i].is_scheduled()==false))
 		{
 			option.push_back(available[i]);
 		}
 	}
+    
+    if (option.size() > 0 ) {
+        //Pick a random integer between 0 and number of option courses
+        int ran;
+        ran = rand() % option.size();
+        string bestChoice;
+        bestChoice = option[ran].get_ID();
+        past.push_back(bestChoice);//Storing the student's wish for each iteration
 
-	//Pick a random integer between 0 and number of option courses
-	int ran;
-	ran = rand() % option.size();
-	string bestChoice;
-	bestChoice = option[ran].get_ID();
-	past.push_back(bestChoice);//Storing the student's wish for each iteration
+        //cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
+        return bestChoice;
+    }
+    
+    else
+        return noChoice;
 
-	//cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
-	return bestChoice;
 }
 
 void students_ini(vector<student> &students, int student_count)

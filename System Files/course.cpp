@@ -117,13 +117,12 @@ void print_all_courses(ostream &out, vector<course> c)
 
 
 
-void Scheduler(vector<string> &FUS, vector<course> &total){
-    
+void Scheduler(vector<string> &FUS, vector<course> &total,int timing){
+    int toggle;
     int count[total.size()];
     
     for (int i=0; i < total.size(); i++){ //initialize count
         count[i]=0;
-        cout<< count[i] <<endl;
     }
     
     for(int i=0;i<FUS.size();i++){
@@ -145,7 +144,10 @@ void Scheduler(vector<string> &FUS, vector<course> &total){
             chosen=i;
         }
     }
-    total[chosen].scheduling('m');
     
+    if (timing==1)
+    total[chosen].scheduling('m');
+    else
+    total[chosen].scheduling('a');
 }
 
