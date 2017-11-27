@@ -1,7 +1,19 @@
 cmake_minimum_required(VERSION 3.8)
-project(Main_body)
+project(Manuel_System_prototype_code)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES Sat-Uni-Main-Body.cpp course.cpp course.h classroom.cpp classroom.h student.cpp student.h reg_system.cpp reg_system.h term_operations.cpp term_operations.h)
-add_executable(Main_body ${SOURCE_FILES})
+set(SOURCE_FILES
+        classroom.cpp
+        classroom.h
+        course.cpp
+        course.h
+        reg_system.cpp
+        reg_system.h
+        Sat-Uni-Main-Body.cpp
+        student.cpp
+        student.h
+        term_operations.cpp
+        term_operations.h)
+
+add_executable(Manuel_System_prototype_code ${SOURCE_FILES})

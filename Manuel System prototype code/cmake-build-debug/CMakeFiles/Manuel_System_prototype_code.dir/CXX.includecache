@@ -1,0 +1,98 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/Sat-Uni-Main-Body.cpp
+course.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+classroom.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
+student.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h
+reg_system.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.h
+term_operations.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.cpp
+iomanip
+-
+fstream
+-
+classroom.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
+iostream
+-
+vector
+-
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.cpp
+iomanip
+-
+fstream
+-
+sstream
+-
+course.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+iostream
+-
+string
+-
+vector
+-
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.cpp
+fstream
+-
+iomanip
+-
+reg_system.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.h
+iostream
+-
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.cpp
+iomanip
+-
+student.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h
+ctime
+-
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h
+iostream
+-
+vector
+-
+course.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.cpp
+fstream
+-
+iomanip
+-
+term_operations.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h
+
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/term_operations.h
+course.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/course.h
+classroom.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/classroom.h
+student.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/student.h
+reg_system.h
+/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/reg_system.h
+

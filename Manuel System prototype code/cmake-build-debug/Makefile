@@ -39,38 +39,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake"
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code"
+CMAKE_SOURCE_DIR = "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Main_body
+# Target rules for targets named Manuel_System_prototype_code
 
 # Build rule for target.
-Main_body: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Main_body
-.PHONY : Main_body
+Manuel_System_prototype_code: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Manuel_System_prototype_code
+.PHONY : Manuel_System_prototype_code
 
 # fast build rule for target.
-Main_body/fast:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/build
-.PHONY : Main_body/fast
+Manuel_System_prototype_code/fast:
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/build
+.PHONY : Manuel_System_prototype_code/fast
 
 Sat-Uni-Main-Body.o: Sat-Uni-Main-Body.cpp.o
 
@@ -129,7 +129,7 @@ Sat-Uni-Main-Body.o: Sat-Uni-Main-Body.cpp.o
 
 # target to build an object file
 Sat-Uni-Main-Body.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.o
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/Sat-Uni-Main-Body.cpp.o
 .PHONY : Sat-Uni-Main-Body.cpp.o
 
 Sat-Uni-Main-Body.i: Sat-Uni-Main-Body.cpp.i
@@ -138,7 +138,7 @@ Sat-Uni-Main-Body.i: Sat-Uni-Main-Body.cpp.i
 
 # target to preprocess a source file
 Sat-Uni-Main-Body.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.i
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/Sat-Uni-Main-Body.cpp.i
 .PHONY : Sat-Uni-Main-Body.cpp.i
 
 Sat-Uni-Main-Body.s: Sat-Uni-Main-Body.cpp.s
@@ -147,7 +147,7 @@ Sat-Uni-Main-Body.s: Sat-Uni-Main-Body.cpp.s
 
 # target to generate assembly for a file
 Sat-Uni-Main-Body.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/Sat-Uni-Main-Body.cpp.s
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/Sat-Uni-Main-Body.cpp.s
 .PHONY : Sat-Uni-Main-Body.cpp.s
 
 classroom.o: classroom.cpp.o
@@ -156,7 +156,7 @@ classroom.o: classroom.cpp.o
 
 # target to build an object file
 classroom.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/classroom.cpp.o
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/classroom.cpp.o
 .PHONY : classroom.cpp.o
 
 classroom.i: classroom.cpp.i
@@ -165,7 +165,7 @@ classroom.i: classroom.cpp.i
 
 # target to preprocess a source file
 classroom.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/classroom.cpp.i
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/classroom.cpp.i
 .PHONY : classroom.cpp.i
 
 classroom.s: classroom.cpp.s
@@ -174,7 +174,7 @@ classroom.s: classroom.cpp.s
 
 # target to generate assembly for a file
 classroom.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/classroom.cpp.s
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/classroom.cpp.s
 .PHONY : classroom.cpp.s
 
 course.o: course.cpp.o
@@ -183,7 +183,7 @@ course.o: course.cpp.o
 
 # target to build an object file
 course.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/course.cpp.o
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/course.cpp.o
 .PHONY : course.cpp.o
 
 course.i: course.cpp.i
@@ -192,7 +192,7 @@ course.i: course.cpp.i
 
 # target to preprocess a source file
 course.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/course.cpp.i
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/course.cpp.i
 .PHONY : course.cpp.i
 
 course.s: course.cpp.s
@@ -201,7 +201,7 @@ course.s: course.cpp.s
 
 # target to generate assembly for a file
 course.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/course.cpp.s
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/course.cpp.s
 .PHONY : course.cpp.s
 
 reg_system.o: reg_system.cpp.o
@@ -210,7 +210,7 @@ reg_system.o: reg_system.cpp.o
 
 # target to build an object file
 reg_system.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.o
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/reg_system.cpp.o
 .PHONY : reg_system.cpp.o
 
 reg_system.i: reg_system.cpp.i
@@ -219,7 +219,7 @@ reg_system.i: reg_system.cpp.i
 
 # target to preprocess a source file
 reg_system.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.i
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/reg_system.cpp.i
 .PHONY : reg_system.cpp.i
 
 reg_system.s: reg_system.cpp.s
@@ -228,7 +228,7 @@ reg_system.s: reg_system.cpp.s
 
 # target to generate assembly for a file
 reg_system.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/reg_system.cpp.s
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/reg_system.cpp.s
 .PHONY : reg_system.cpp.s
 
 student.o: student.cpp.o
@@ -237,7 +237,7 @@ student.o: student.cpp.o
 
 # target to build an object file
 student.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/student.cpp.o
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/student.cpp.o
 .PHONY : student.cpp.o
 
 student.i: student.cpp.i
@@ -246,7 +246,7 @@ student.i: student.cpp.i
 
 # target to preprocess a source file
 student.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/student.cpp.i
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/student.cpp.i
 .PHONY : student.cpp.i
 
 student.s: student.cpp.s
@@ -255,7 +255,7 @@ student.s: student.cpp.s
 
 # target to generate assembly for a file
 student.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/student.cpp.s
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/student.cpp.s
 .PHONY : student.cpp.s
 
 term_operations.o: term_operations.cpp.o
@@ -264,7 +264,7 @@ term_operations.o: term_operations.cpp.o
 
 # target to build an object file
 term_operations.cpp.o:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/term_operations.cpp.o
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/term_operations.cpp.o
 .PHONY : term_operations.cpp.o
 
 term_operations.i: term_operations.cpp.i
@@ -273,7 +273,7 @@ term_operations.i: term_operations.cpp.i
 
 # target to preprocess a source file
 term_operations.cpp.i:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/term_operations.cpp.i
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/term_operations.cpp.i
 .PHONY : term_operations.cpp.i
 
 term_operations.s: term_operations.cpp.s
@@ -282,7 +282,7 @@ term_operations.s: term_operations.cpp.s
 
 # target to generate assembly for a file
 term_operations.cpp.s:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/term_operations.cpp.s
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/term_operations.cpp.s
 .PHONY : term_operations.cpp.s
 
 # Help Target
@@ -291,9 +291,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Main_body"
+	@echo "... edit_cache"
+	@echo "... Manuel_System_prototype_code"
 	@echo "... Sat-Uni-Main-Body.o"
 	@echo "... Sat-Uni-Main-Body.i"
 	@echo "... Sat-Uni-Main-Body.s"

@@ -45,54 +45,54 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake"
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code"
+CMAKE_SOURCE_DIR = "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug"
 
 #=============================================================================
-# Target rules for target CMakeFiles/Main_body.dir
+# Target rules for target CMakeFiles/Manuel_System_prototype_code.dir
 
 # All Build rule for target.
-CMakeFiles/Main_body.dir/all:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/depend
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target Main_body"
-.PHONY : CMakeFiles/Main_body.dir/all
+CMakeFiles/Manuel_System_prototype_code.dir/all:
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/depend
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target Manuel_System_prototype_code"
+.PHONY : CMakeFiles/Manuel_System_prototype_code.dir/all
 
 # Include target in all.
-all: CMakeFiles/Main_body.dir/all
+all: CMakeFiles/Manuel_System_prototype_code.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Main_body.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" 7
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Main_body.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/Main_body.dir/rule
+CMakeFiles/Manuel_System_prototype_code.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Manuel_System_prototype_code.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/Manuel_System_prototype_code.dir/rule
 
 # Convenience name for target.
-Main_body: CMakeFiles/Main_body.dir/rule
+Manuel_System_prototype_code: CMakeFiles/Manuel_System_prototype_code.dir/rule
 
-.PHONY : Main_body
-
-# clean rule for target.
-CMakeFiles/Main_body.dir/clean:
-	$(MAKE) -f CMakeFiles/Main_body.dir/build.make CMakeFiles/Main_body.dir/clean
-.PHONY : CMakeFiles/Main_body.dir/clean
+.PHONY : Manuel_System_prototype_code
 
 # clean rule for target.
-clean: CMakeFiles/Main_body.dir/clean
+CMakeFiles/Manuel_System_prototype_code.dir/clean:
+	$(MAKE) -f CMakeFiles/Manuel_System_prototype_code.dir/build.make CMakeFiles/Manuel_System_prototype_code.dir/clean
+.PHONY : CMakeFiles/Manuel_System_prototype_code.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Manuel_System_prototype_code.dir/clean
 
 .PHONY : clean
 
