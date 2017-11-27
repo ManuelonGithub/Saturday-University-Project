@@ -26,7 +26,7 @@ int main()
     //print_all_classrooms(cout, classrooms);
 
     students_ini(students, sys.students());
-
+    classrooms[2].write(cout);
     //time_table_creation_test_1(courses, classrooms);
 
     //time_table_print(courses, sys.terms_to_process());
@@ -38,7 +38,9 @@ int main()
     for (int k = 0; k < iteration; k++)
     {
         cout << "Iteration number: " << k+1 << endl;
+    
         FUS.clear();
+        
         for (i=0; i < students.size(); i++)
         {
         FUS.push_back(students[i].bestChoice(courses)); // FUS gives students suggestion

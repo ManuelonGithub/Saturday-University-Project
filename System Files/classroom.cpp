@@ -4,7 +4,8 @@
 #include <iomanip>
 #include <fstream>
 #include "classroom.h"
-
+#include "course.h"
+#include "student.h"
 string classroom::get_room() { return room_name; }
 
 classroom::classroom(int r, int vac)
@@ -19,9 +20,13 @@ void classroom::write(ostream &out) const
     out << "Room '" << room_name << "' -> " << "vacancy of " << vacancy << "\n";
 }
 
-void assign(int size){
-    
+void classroom:: setCourseMorning(string morn){
+    m = morn;
 }
+void classroom:: setCourseAfternoon(string aft){
+    a= aft;
+}
+
 void classrooms_read(string Filepath, vector<classroom> &classrooms)
 {
     ifstream rooms_in;

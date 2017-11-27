@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 #ifndef MAIN_BODY_CLASSROOM_H
@@ -14,10 +15,15 @@ private:
     string room_name;
     int vacancy;
     int capacity;
+    string m;
+    string a;
 public:
     classroom(int r, int vac);
     void write(ostream &out) const;
     string get_room();
+    void setCourseMorning(string morn);
+    void setCourseAfternoon(string aft);
+
 };
 
 void classrooms_read(string Filepath, vector<classroom> &classrooms);

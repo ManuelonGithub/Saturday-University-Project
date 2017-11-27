@@ -57,8 +57,8 @@ int calculateTuition(vector<course> &term) {
     return tuition; // Is this value 0, 1, or 2 always?
 }
 
-void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<student> &students, vector<classroom> &classrooms, int &room){
-    // &room is the iteration count. even == morning odd == afternoon
+void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<student> &students, vector<classroom> &classrooms, int room){
+    // room is the iteration count. even == morning odd == afternoon
     int count[total.size()];
     char time;
     int noCount=0;
@@ -89,18 +89,25 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
         }
     }
     if (noCount != FUS.size()) { // if at least one course was chosen by a student
-        if (timing==1) // toggle between morning and afternoon
+        if (timing==1){ // toggle between morning and afternoon
             time = 'm';
-        else
+            classrooms[room].setCourseMorning(total[chosen].get_ID());
+        }
+        else{
             time = 'a';
-    
-        total[chosen].scheduling(time);
+            classrooms[room].setCourseAfternoon(total[chosen].get_ID());
+        }
+        
+        total[chosen].scheduling(time); // it happens, course put on schedule. but where?
+        
+        
         for (int i=0; i < students.size(); i++){
             if (total[chosen].get_ID() == FUS[i]){
                 cout << "Student B" << students[i].get_id()<<" will take course " << total[chosen].get_ID() << "in the " << time << endl;
                 students[i].schedule(time, total[chosen].get_ID()) ; // give the student the course at the specified time
         }
     }
+        
     }
     else {
         cout << "Nothing assigned this time" << endl;

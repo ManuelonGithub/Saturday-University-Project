@@ -38,5 +38,4 @@ void courses_read(string Filepath, vector<course> &courses, int sys_course_count
 
 void print_all_courses(ostream &out, vector<course> c);
 
-
 #endif //MAIN_BODY_COURSE_H
