@@ -35,9 +35,9 @@ int main()
     
     iteration = iteration*2; // morning and afternoon iterations
     
-    for (int k = 1; k <= iteration; k++)
+    for (int k = 0; k < iteration; k++)
     {
-        cout << "Iteration number: " << k << endl;
+        cout << "Iteration number: " << k+1 << endl;
         FUS.clear();
         for (i=0; i < students.size(); i++)
         {
@@ -45,8 +45,10 @@ int main()
         students[i].set_selected_course(FUS[i]); // save student suggestion in the class
         }
         timing= timing * -1; //morning/afternoon toggler
-        Scheduler(FUS, courses, timing, students);//Determine what class should be scheduled and when
-        print_attendance(FUS, courses, timing, students);
+        Scheduler(FUS, courses, timing, students, classrooms, k);//Determine what class should be scheduled and when
+        print_attendance(FUS, courses, students, classrooms);
+
+        
     }
     
     

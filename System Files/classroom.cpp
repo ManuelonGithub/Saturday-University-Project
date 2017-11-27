@@ -19,6 +19,9 @@ void classroom::write(ostream &out) const
     out << "Room '" << room_name << "' -> " << "vacancy of " << vacancy << "\n";
 }
 
+void assign(int size){
+    
+}
 void classrooms_read(string Filepath, vector<classroom> &classrooms)
 {
     ifstream rooms_in;
@@ -28,7 +31,7 @@ void classrooms_read(string Filepath, vector<classroom> &classrooms)
 
     if(!rooms_in)
     {
-        cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
+        cout << "error opening courses input file. Make sure the name of the file is: classrooms.txt" << endl;
         exit(1);
     }
     else

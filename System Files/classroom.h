@@ -13,7 +13,7 @@ class classroom{
 private:
     string room_name;
     int vacancy;
-
+    int capacity;
 public:
     classroom(int r, int vac);
     void write(ostream &out) const;
@@ -21,7 +21,7 @@ public:
 };
 
 void classrooms_read(string Filepath, vector<classroom> &classrooms);
-
+void assign(int r);
 void print_all_classrooms(ostream &out, vector<classroom> c);
 
 #endif //MAIN_BODY_CLASSROOM_H

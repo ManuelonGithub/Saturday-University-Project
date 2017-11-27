@@ -59,10 +59,11 @@ void student::schedule(char t, string c)
 string student :: bestChoice(vector<course> &available){ //take courses from main as argument
     
     int preReqDone;
-    string noChoice = "No course works for this sad, sorry student";
+    string noChoice = "No";
     vector<string> past; // the courses the student has gotten on each iteration of the FUS
     vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
     
+    if ((scheduled_courses[0] == "") || (scheduled_courses[1] == "")){
     for (int i=0; i < available.size(); i++) // Check all courses
     {
         preReqDone=0;
@@ -97,8 +98,9 @@ string student :: bestChoice(vector<course> &available){ //take courses from mai
         //cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
         return bestChoice;
     }
+        
+    }
     
-    else
         return noChoice;
     
 }
