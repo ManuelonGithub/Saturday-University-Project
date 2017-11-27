@@ -56,3 +56,47 @@ int calculateTuition(vector<course> &term) {
     tuitionHistory.push_back(tuition);
     return tuition; // Is this value 0, 1, or 2 always?
 }
+
+void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<student> &students){
+    int count[total.size()];
+    char time;
+    
+    for (int i=0; i < total.size(); i++){ //initialize count
+        count[i]=0;
+    }
+    
+    for(int i=0;i<FUS.size();i++){
+        for(int j=0;j < total.size();j++){
+            if(FUS[i]==total[j].get_ID()){
+                count[j]= count[j] + 1; // course gets a count
+            }
+        }
+    }
+    cout << FUS.size() << endl;
+    for (int j=0; j < total.size(); j++){ // finds course with most wishes
+        cout<< total[j].get_ID() <<" has " << count[j]<<endl;
+    }
+    int max=0;
+    int chosen=0;
+    for(int i=0;i<total.size();i++){
+        if(count[i]>max){
+            max=count[i];
+            chosen=i;
+        }
+    }
+                                           
+    if (timing==1) // toggle between morning and afternoon
+            time = 'm';
+    else
+            time = 'a';
+    
+    total[chosen].scheduling(time);
+    
+    for (int i=0; i < students.size(); i++){
+        if (total[chosen].get_ID() == FUS[i]){
+            cout << "Student B" << students[i].get_id()<<" will take course " << total[chosen].get_ID() << "in the " << time << endl;
+            students[i].schedule(time, total[chosen].get_ID()) ; // give the student the course at the specified time
+        }
+}
+}
+

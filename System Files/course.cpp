@@ -117,37 +117,4 @@ void print_all_courses(ostream &out, vector<course> c)
 
 
 
-void Scheduler(vector<string> &FUS, vector<course> &total,int timing){
-    int toggle;
-    int count[total.size()];
-    
-    for (int i=0; i < total.size(); i++){ //initialize count
-        count[i]=0;
-    }
-    
-    for(int i=0;i<FUS.size();i++){
-        for(int j=0;j < total.size();j++){
-            if(FUS[i]==total[j].get_ID()){
-                count[j]= count[j] + 1; // course gets a count
-            }
-        }
-    }
-    cout << FUS.size() << endl;
-    for (int j=0; j < total.size(); j++){ // finds course with most wishes
-        cout<< "The course " << total[j].get_ID() <<" has this many students wishing for it:" << count[j]<<endl;
-    }
-    int max=0;
-    int chosen=0;
-    for(int i=0;i<total.size();i++){
-        if(count[i]>max){
-            max=count[i];
-            chosen=i;
-        }
-    }
-    
-    if (timing==1)
-    total[chosen].scheduling('m');
-    else
-    total[chosen].scheduling('a');
-}
 

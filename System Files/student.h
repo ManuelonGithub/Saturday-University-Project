@@ -27,6 +27,7 @@ public:
     void write(ostream &out) const;
     void schedule(char t, string c);
     string bestChoice(vector<course> &in);
+    void course_complete(string c);
 };
 
 void students_ini(vector<student> &students, int student_count);

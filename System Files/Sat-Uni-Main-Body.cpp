@@ -5,6 +5,7 @@
 #include "term_operations.h"
 int main()
 {
+    srand(time(NULL));
     reg_system sys{};
     vector<course> courses;
     vector<classroom> classrooms;
@@ -32,7 +33,7 @@ int main()
 
     iteration = classrooms.size() - 1;
     
-    iteration = iteration*2; // morning and afternoon
+    iteration = iteration*2; // morning and afternoon iterations
     
     for (int k = 0; k < iteration; k++)
     {
@@ -40,10 +41,11 @@ int main()
         for (i=0; i < students.size(); i++)
         {
         FUS.push_back(students[i].bestChoice(courses)); // FUS gives students suggestion
+        students[i].set_selected_course(FUS[i]); // save student suggestion in the class
         }
-        timing= timing * -1;
-        Scheduler(FUS, courses, timing);//Determine what class should be scheduled
-    
+        timing= timing * -1; //morning/afternoon toggler
+        Scheduler(FUS, courses, timing, students);//Determine what class should be scheduled and when
+        
     }
     
     
