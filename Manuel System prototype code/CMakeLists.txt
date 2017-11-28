@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(Manuel_System_prototype_code)
+project(untitled)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -16,4 +16,4 @@ set(SOURCE_FILES
         term_operations.cpp
         term_operations.h)
 
-add_executable(Manuel_System_prototype_code ${SOURCE_FILES})
+add_executable(untitled ${SOURCE_FILES})

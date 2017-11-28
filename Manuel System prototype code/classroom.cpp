@@ -1,6 +1,7 @@
 //
 // Created by Manuel on 22/11/2017.
 //
+
 #include <iomanip>
 #include <fstream>
 #include "classroom.h"
@@ -17,6 +18,19 @@ string classroom::get_room() { return room_name; }      // Method that retrieves
 void classroom::write(ostream &out) const       // Method that prints the classroom's pertinent information to out
 {
     out << "Room '" << room_name << "' -> " << "vacancy of " << vacancy << "\n";
+}
+
+void classroom:: setCourseMorning(string morn, int size ){
+    m = morn;
+    capacityMorning = size;
+}
+void classroom:: setCourseAfternoon(string aft,int size){
+    a= aft;
+    capacityAfternoon= size;
+}
+
+void classroom:: printCourses(void) {
+    cout << room_name << "       "<< vacancy<<"         " << capacityMorning << "/" << m <<   "                  " << capacityAfternoon << "/" << a << endl;
 }
 
 void classrooms_read(string Filepath, vector<classroom> &classrooms)    // Function that takes in the classroom input file and adds the classrooms available to the classrooms vector

@@ -6,7 +6,7 @@
 #include <iomanip>
 #include "term_operations.h"
 
-void time_table_print(vector<course> &courses, int t)       // WIP: Creates a text file for every term processed, and prints out the time table for that semester
+void time_table_print(vector<course> &courses, int t)
 {
     string term = "Term " + to_string((t+1)) + " Time Table.txt";
     ofstream fileout;
@@ -15,12 +15,13 @@ void time_table_print(vector<course> &courses, int t)       // WIP: Creates a te
     fileout << term << "\n\n";
 
     for (int i = 0; i < courses.size(); i++) {
-        if(courses[i].is_scheduled()) {
+        if(courses[i].is_scheduled())
+        {
             fileout << "Course ID: " << courses[i].get_ID() << " - Room: " << courses[i].get_room() << " - Course time: ";
-            if(courses[i].course_time() == 'm') {
+            if(courses[i].course_time() == 'm'){
                 fileout << "Morning";
             }
-            else if(courses[i].course_time() == 'a') {
+            else if(courses[i].course_time() == 'a'){
                 fileout << "Afternoon";
             }
             fileout << "\n\n";
@@ -30,14 +31,14 @@ void time_table_print(vector<course> &courses, int t)       // WIP: Creates a te
     fileout.close();
 }
 
-void time_table_creation_test_1(vector<course> &courses, vector<classroom> &classrooms)     // A test to create a time table
+void time_table_creation_test_1(vector<course> &courses, vector<classroom> &classrooms)
 {
     for (int i = 0; i < classrooms.size(); i++)
     {
-        if((i % 2) == 0) {
+        if((i % 2) == 0)  {
             courses[i].scheduling('m');
         }
-        else {
+        else  {
             courses[i].scheduling('a');
         }
         courses[i].set_room(classrooms[i].get_room());
@@ -64,7 +65,7 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
     for (int i=0; i < total.size(); i++){ //initialize count
         count[i]=0;
     }
-
+ 
     for(int i=0;i<FUS.size();i++){
         if (FUS[i]=="No") {
             noCount++;
@@ -96,16 +97,16 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
             time = 'a';
             classrooms[room].setCourseAfternoon(total[chosen].get_ID(),max);
         }
-
+        
         total[chosen].scheduling(time); // it happens, course put on schedule. but where?
-
+        
         for (int i=0; i < students.size(); i++){
             if (total[chosen].get_ID() == FUS[i]){
                 cout << "Student B" << students[i].get_id()<<" will take course " << total[chosen].get_ID() << "in the " << time << endl;
                 students[i].schedule(time, total[chosen].get_ID()) ; // give the student the course at the specified time
-            }
         }
-
+    }
+        
     }
     else {
         cout << "Nothing assigned this time" << endl;
@@ -119,16 +120,3 @@ void print_attendance(vector<string> &FUS, vector<course> &total, vector<student
     }
 }
 
-void term_completed(vector<student> &grad_st, vector<student> &st, vector<course> &c, vector<string> &sel_cs, reg_system &sys)      // WIP: Funcion to be called at the end of each semester
-{
-    for(int i = 0; i < st.size(); i++) {
-        st[i].complete_courses();
-        st[i].graduate(sys.core_courses());
-    }
-    for(int i = 0; i < c.size(); i++) {
-        if(c[i].is_scheduled()) {
-            c[i].clear_sch();
-        }
-    }
-    fill(sel_cs.begin(), sel_cs.end(), "");
-}

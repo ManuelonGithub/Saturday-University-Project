@@ -21,15 +21,14 @@ private:
 public:
     void create(string Filename);
     void write(ostream &out) const;
+    void classrooms(int r);
     int students();
     int terms_to_process();
     int courses();
     int Sample_Term();
     int Sample_Student();
-    void classrooms(int r);
 };
 
 //void clear_for_next_term(vector<course> &courses);
 
 #endif //MAIN_BODY_SYSTEM_H
-

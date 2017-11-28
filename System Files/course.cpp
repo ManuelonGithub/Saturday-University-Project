@@ -11,17 +11,18 @@ course::course(string cID, bool scheduled)
     courseID = cID;
     type = courseID[0];
 }
-void course::set_pre_req(string const id)   { pre_req.push_back(id);}
-void course::set_room(string room)          { classroom = room; }
-bool course::is_scheduled()                 { return scheduled; }
-char course::course_time()                  { return time; }
-int  course::getSizePreReq(void)            { return pre_req.size(); }
-string course::get_room()                   { return classroom; }
-string course::get_ID()                     { return courseID; }
-string course::get_pre_req(int k)            { return pre_req[k]; }
+
+void course::set_pre_req(string const id)   { pre_req.push_back(id);}                       // Method that adds a course ID to the pre-requisite vector that each course contains
+void course::set_room(string room)          { classroom = room; }                           // Method that sets the assigned room for the course during the current term
+bool course::is_scheduled()                 { return scheduled; }                           // Method that checks if the course has been scheduled for the current term
+char course::course_time()                  { return time; }                                // Method that checks the time slot assigned to the course
+int course::getSizePreReq()                 { return static_cast<int>(pre_req.size()); }    // Method that retrieves how many pre-requisite courses the course has
+string course::get_room()                   { return classroom; }                           // Method that retrieves the assigned room for the course during the current term
+string course::get_ID()                     { return courseID; }                            // Method that retrieves the course ID
+string course::get_pre_req(int k)           { return pre_req[k]; }                          // Method that retrieves a course ID from the pre-req vector of the course
 
 
-void course::write(ostream &out) const
+void course::write(ostream &out) const      // Method that prints pertinent information of the course to out
 {
     out << courseID << ": " << "\n";
 
@@ -46,24 +47,24 @@ void course::write(ostream &out) const
     out << "\n\n";
 }
 
-void course::scheduling(char t)
+void course::scheduling(char t)     // Method that schedules the course to its designated time slot
 {
     time = t;
     scheduled = true;
-    cout << "The course " << courseID << " just got scheduled in the " << time << endl;
 }
 
-void course::clear_sch()
+void course::clear_sch()    // Method that clears out the information that was only pertinent for the past term
 {
     scheduled = false;
     time = ' ';
+    occupancy = 0;
+    classroom = "";
 }
 
-void courses_read(string Filepath, vector<course> &courses, int sys_course_count)
+void courses_read(string Filepath, vector<course> &courses)     // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
 {
     course *c;
     string str;
-    int total_courses_given;
     ifstream courses_in;
 
     courses_in.open(Filepath.c_str());
@@ -76,16 +77,6 @@ void courses_read(string Filepath, vector<course> &courses, int sys_course_count
     else
     {
         getline(courses_in, str);
-
-        total_courses_given = stoi(str);
-        if(total_courses_given != sys_course_count)
-        {
-            cout << "ERROR: Total courses in course file (" << total_courses_given << ") ";
-            cout << "doesn't match the total courses established by the system parameter file (" << sys_course_count << ")";
-            cout << "\n";
-
-            exit(1);
-        }
 
         while(getline(courses_in, str))
         {
@@ -107,14 +98,10 @@ void courses_read(string Filepath, vector<course> &courses, int sys_course_count
     courses_in.close();
 }
 
-void print_all_courses(ostream &out, vector<course> c)
+void print_all_courses(ostream &out, vector<course> c)      // Funciton that prints out all courses offered by the university and their pertinent information to out
 {
     for(int i = 0; i < c.size(); i++)
     {
         c[i].write(out);
     }
 }
-
-
-
-

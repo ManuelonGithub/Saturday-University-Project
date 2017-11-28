@@ -26,7 +26,6 @@ void reg_system::create(string Filename)    // Method that takes in the system p
         sys_par_in >> Student_to_Sample;
         core_courses_req = (total_courses_req-2);
     }
-
     sys_par_in.close();
 }
 
@@ -41,10 +40,20 @@ void reg_system::write(ostream &out) const      // Method that outputs the regis
     out << "Student to be sampled: " << setw(28) << "Student #" << Student_to_Sample << "\n\n";
 }
 
-int reg_system::students()          { return student_number; }              // Method that retrieves the number of students attending the university
-int reg_system::terms_to_process()  { return total_terms_to_process; }      // Method that retrieves the number of terms the system needs to process
-int reg_system::courses()           { return total_courses_req; }           // Method that retrieves the total amount of courses required for a student to graduate
-int reg_system::core_courses()      { return core_courses_req; }            // Method that retrieves the total amount of core courses required for a student to graduate
-int reg_system::Sample_Term()       { return Term_to_Sample; }              // Method that retrieves the term # needed to be sampled
-int reg_system::Sample_Student()    { return Student_to_Sample; }           // Method that retrieves the student # that the system needs to sample
-void reg_system::set_classrooms(int r)  { total_classrooms = r; }           // Method that sets the total amount of classrooms available to assign to the courses
+int reg_system::students()              { return student_number; }              // Method that retrieves the number of students attending the university
+int reg_system::terms_to_process()      { return total_terms_to_process; }      // Method that retrieves the number of terms the system needs to process
+int reg_system::courses()               { return total_courses_req; }           // Method that retrieves the total amount of courses required for a student to graduate
+int reg_system::core_courses()          { return core_courses_req; }            // Method that retrieves the total amount of core courses required for a student to graduate
+int reg_system::Sample_Term()           { return Term_to_Sample; }              // Method that retrieves the term # needed to be sampled
+int reg_system::Sample_Student()        { return Student_to_Sample; }           // Method that retrieves the student # that the system needs to sample
+void reg_system::set_classrooms(int r)  { total_classrooms = r; }               // Method that sets the total amount of classrooms available to assign to the courses
+
+/*
+void clear_for_next_term(vector<course> &courses)
+{
+    for(int i = 0; i < courses.size(); i++)
+    {
+        courses[i].clear_sch();
+    }
+}
+ */
