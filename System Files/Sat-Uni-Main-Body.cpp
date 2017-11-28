@@ -11,7 +11,7 @@ int main()
     vector<classroom> classrooms;
     vector<student> students;
     vector<string> FUS;
-    int iteration=0, i, timing=-1;
+    int iteration=0, i, timing= -1;
     
     sys.create("system-parameters-in.txt");
 
@@ -26,14 +26,14 @@ int main()
     //print_all_classrooms(cout, classrooms);
 
     students_ini(students, sys.students());
-    classrooms[2].write(cout);
+    
     //time_table_creation_test_1(courses, classrooms);
 
     //time_table_print(courses, sys.terms_to_process());
 
     iteration = classrooms.size() - 1;
     
-    iteration = iteration*2; // morning and afternoon iterations
+    iteration = iteration*2; // morning and afternoon iterations for each classroom (potential to fill all rooms here)
     
     for (int k = 0; k < iteration; k++)
     {
@@ -47,6 +47,7 @@ int main()
         students[i].set_selected_course(FUS[i]); // save student suggestion in the class
         }
         timing= timing * -1; //morning/afternoon toggler
+        
         Scheduler(FUS, courses, timing, students, classrooms, k);//Determine what class should be scheduled and when
         print_attendance(FUS, courses, students, classrooms);
 

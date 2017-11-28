@@ -48,13 +48,14 @@ void student::write(ostream &out) const
 
 void student::schedule(char t, string c)
 {
-    if(t == 'm')  {
+    if((t == 'm') && (scheduled_courses[0]== "")) { // don't over write
 		scheduled_courses[0] = c;
 	}
-	if(t == 'a') {
+	if((t == 'a') && (scheduled_courses[1]== "")){
 		scheduled_courses[1] = c;
 	}
-    completed_courses.push_back(c);}
+    completed_courses.push_back(c); // complete record of courses done by the student
+}
 
 string student :: bestChoice(vector<course> &available){ //take courses from main as argument
     
@@ -63,7 +64,7 @@ string student :: bestChoice(vector<course> &available){ //take courses from mai
     vector<string> past; // the courses the student has gotten on each iteration of the FUS
     vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
     
-    if ((scheduled_courses[0] == "") || (scheduled_courses[1] == "")){
+    if ((scheduled_courses[0] == "") || (scheduled_courses[1] == "")){ // if student still needs at least one course this term
     for (int i=0; i < available.size(); i++) // Check all courses
     {
         preReqDone=0;
@@ -91,6 +92,7 @@ string student :: bestChoice(vector<course> &available){ //take courses from mai
         //Pick a random integer between 0 and number of option courses
         int ran;
         ran = rand() % option.size();
+        cout << ran;
         string bestChoice;
         bestChoice = option[ran].get_ID();
         past.push_back(bestChoice);//Storing the student's wish for each iteration

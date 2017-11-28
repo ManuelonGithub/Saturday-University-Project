@@ -20,11 +20,13 @@ void classroom::write(ostream &out) const
     out << "Room '" << room_name << "' -> " << "vacancy of " << vacancy << "\n";
 }
 
-void classroom:: setCourseMorning(string morn){
+void classroom:: setCourseMorning(string morn, int size ){
     m = morn;
+    capacityMorning = size;
 }
-void classroom:: setCourseAfternoon(string aft){
+void classroom:: setCourseAfternoon(string aft,int size){
     a= aft;
+    capacityAfternoon= size;
 }
 
 void classrooms_read(string Filepath, vector<classroom> &classrooms)

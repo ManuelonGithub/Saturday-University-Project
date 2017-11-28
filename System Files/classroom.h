@@ -14,15 +14,16 @@ class classroom{
 private:
     string room_name;
     int vacancy;
-    int capacity;
+    int capacityMorning;
+    int capacityAfternoon;
     string m;
     string a;
 public:
     classroom(int r, int vac);
     void write(ostream &out) const;
     string get_room();
-    void setCourseMorning(string morn);
-    void setCourseAfternoon(string aft);
+    void setCourseMorning(string morn, int size);
+    void setCourseAfternoon(string aft, int size);
 
 };
 

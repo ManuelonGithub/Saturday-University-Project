@@ -89,17 +89,16 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
         }
     }
     if (noCount != FUS.size()) { // if at least one course was chosen by a student
-        if (timing==1){ // toggle between morning and afternoon
+        if (timing==1) {// toggle between morning and afternoon
             time = 'm';
-            classrooms[room].setCourseMorning(total[chosen].get_ID());
+            classrooms[room].setCourseMorning(total[chosen].get_ID(),max);
         }
-        else{
+        else {
             time = 'a';
-            classrooms[room].setCourseAfternoon(total[chosen].get_ID());
+            classrooms[room].setCourseAfternoon(total[chosen].get_ID(),max);
         }
         
         total[chosen].scheduling(time); // it happens, course put on schedule. but where?
-        
         
         for (int i=0; i < students.size(); i++){
             if (total[chosen].get_ID() == FUS[i]){
