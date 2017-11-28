@@ -1,2 +1,0 @@
-Options: 
-CMake: 3.8.2@/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake

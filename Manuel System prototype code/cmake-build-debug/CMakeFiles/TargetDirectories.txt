@@ -1,3 +1,0 @@
-/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/manuel/Desktop/Saturday-University-Project/Manuel System prototype code/cmake-build-debug/CMakeFiles/Manuel_System_prototype_code.dir
