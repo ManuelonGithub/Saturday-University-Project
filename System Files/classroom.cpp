@@ -4,32 +4,22 @@
 #include <iomanip>
 #include <fstream>
 #include "classroom.h"
-#include "course.h"
-#include "student.h"
-string classroom::get_room() { return room_name; }
 
-classroom::classroom(int r, int vac)
+classroom::classroom(int r, int vac)        // Class classroom constructor
 {
     string name = "R" + to_string(r);
     room_name = name;
     vacancy = vac;
 }
 
-void classroom::write(ostream &out) const
+string classroom::get_room() { return room_name; }      // Method that retrieves the designated room name
+
+void classroom::write(ostream &out) const       // Method that prints the classroom's pertinent information to out
 {
     out << "Room '" << room_name << "' -> " << "vacancy of " << vacancy << "\n";
 }
 
-void classroom:: setCourseMorning(string morn, int size ){
-    m = morn;
-    capacityMorning = size;
-}
-void classroom:: setCourseAfternoon(string aft,int size){
-    a= aft;
-    capacityAfternoon= size;
-}
-
-void classrooms_read(string Filepath, vector<classroom> &classrooms)
+void classrooms_read(string Filepath, vector<classroom> &classrooms)    // Function that takes in the classroom input file and adds the classrooms available to the classrooms vector
 {
     ifstream rooms_in;
     int vac, r, rn;
@@ -38,7 +28,7 @@ void classrooms_read(string Filepath, vector<classroom> &classrooms)
 
     if(!rooms_in)
     {
-        cout << "error opening courses input file. Make sure the name of the file is: classrooms.txt" << endl;
+        cout << "error opening courses input file. Make sure the name of the file is: courses.txt" << endl;
         exit(1);
     }
     else
@@ -56,10 +46,11 @@ void classrooms_read(string Filepath, vector<classroom> &classrooms)
     rooms_in.close();
 }
 
-void print_all_classrooms(ostream &out, vector<classroom> c)
+void print_all_classrooms(ostream &out, vector<classroom> c)    // Function that prints out all classrooms and their pertinent information
 {
     for(int i = 0; i < c.size(); i++)
     {
         c[i].write(out);
     }
+    out << "\n";
 }
