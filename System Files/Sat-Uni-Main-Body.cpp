@@ -50,10 +50,12 @@ int main()
         
         Scheduler(FUS, courses, timing, students, classrooms, k);//Determine what class should be scheduled and when
         print_attendance(FUS, courses, students, classrooms);
-
         
     }
-    
+    cout << "Room     Morning course/size    Afternoon course/size"  <<endl;
+    for (int i=0; i < classrooms.size(); i++){
+        classrooms[i].printCourses();
+    }
     
 	//for(int i = 0; i < sys.terms_to_process(); i++){
 

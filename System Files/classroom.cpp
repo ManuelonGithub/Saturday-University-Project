@@ -29,6 +29,10 @@ void classroom:: setCourseAfternoon(string aft,int size){
     capacityAfternoon= size;
 }
 
+void classroom:: printCourses(void) {
+    cout << room_name << "       "<< vacancy<<"         " << capacityMorning << "/" << m <<   "                  " << capacityAfternoon << "/" << a << endl;
+}
+
 void classrooms_read(string Filepath, vector<classroom> &classrooms)
 {
     ifstream rooms_in;

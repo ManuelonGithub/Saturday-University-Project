@@ -24,7 +24,7 @@ public:
     string get_room();
     void setCourseMorning(string morn, int size);
     void setCourseAfternoon(string aft, int size);
-
+    void printCourses(void);
 };
 
 void classrooms_read(string Filepath, vector<classroom> &classrooms);
