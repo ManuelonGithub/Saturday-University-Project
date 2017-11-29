@@ -14,7 +14,8 @@ int main()
     vector<student> graduated_students;     // WIP: A vector of all student that have graduated. The objective is to remove students from the 'students' vector when they have graduated, and store them here instead
     vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
     int iteration=0, i, timing= -1;
-
+    int term=0;
+    int term_tuition;
     sys.create("system-parameters-in.txt");     // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
 
     //sys.write(cout);
@@ -55,11 +56,8 @@ int main()
         print_attendance(FUS, courses, students, classrooms);
 
     }
-    cout << "Room     Morning course/size    Afternoon course/size"  <<endl;
-    for (int i=0; i < classrooms.size(); i++){
-        classrooms[i].printCourses();
-    }
-
+        term_tuition = building_manager(courses, students, classrooms,term);//building manager it to be edited when term for loop change
+    cout<<"The amount of tuition paid for term "<<term+1<<" is "<<term_tuition<<endl;
     //for(int i = 0; i < sys.terms_to_process(); i++){
 
     // while( !reg_n_sched_complete):

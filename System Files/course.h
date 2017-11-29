@@ -24,6 +24,7 @@ public:
     explicit course(string cID, bool scheduled = false);    // Class course constructor. See course.cpp line 9 for the constructor's body
     void set_pre_req(string const id );                     // Method that adds a course ID to the pre-requisite vector that each course contains. See course.cpp line 15 for the Method's body
     void set_room(string room);                             // Method that sets the assigned room for the course during the current term. See course.cpp line 16 for the Method's body
+    void set_ID(string id);
     bool is_scheduled();                                    // Method that checks if the course has been scheduled for the current term. See course.cpp line 17 for the Method's body
     char course_time();                                     // Method that checks the time slot assigned to the course. See course.cpp line 18 for the Method's body
     int getSizePreReq();                                    // Method that retrieves how many pre-requisite courses the course has. See course.cpp line 19 for the Method's body

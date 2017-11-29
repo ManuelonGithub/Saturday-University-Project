@@ -21,6 +21,7 @@ private:
 
 public:
     classroom(int r, int vac);          // Class classroom constructor. See classroom.cpp line  for the constructor's body
+    int get_maxcap();
     string get_room();                  // Method that retrieves the designated room name. See classroom.cpp line  for the method's body
     void write(ostream &out) const;     // Method that prints the classroom's pertinent information to out. See classroom.cpp line  for the method's body
     void setCourseMorning(string morn, int size);

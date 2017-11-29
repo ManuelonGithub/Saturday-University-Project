@@ -132,3 +132,133 @@ void term_completed(vector<student> &grad_st, vector<student> &st, vector<course
     }
     fill(sel_cs.begin(), sel_cs.end(), "");
 }
+
+int building_manager(vector<course> &total, vector<student> &students, vector <classroom> &classrooms, int term){
+    int count[total.size()];
+    int countaft[total.size()];
+    for (int i=0; i < total.size(); i++){ //initialize count
+        count[i]=0;
+        countaft[i]=0;
+    }
+    for(int i=0;i<students.size();i++){
+        for(int j=0;j<total.size();j++){
+            if(students[i].attendance(0)==total[j].get_ID()){
+                count[j]++;
+            }
+            if(students[i].attendance(1)==total[j].get_ID()){
+                countaft[j]++;
+            }
+            
+        }
+    }
+    string w[total.size()];
+    for(int i=0;i<total.size();i++){
+        w[i]=total[i].get_ID();
+    }
+    for(int i=0;i<total.size();i++){//this part of the code cancels classes with less than 3 students
+        if (count[i]<3){
+            count[i]=0;
+        }
+        if (countaft[i]<3){
+            countaft[i]=0;
+        }
+    }
+    string tempst;
+    int temp=0;
+    for(int i=1;i<total.size();i++){
+        bool flag= 0;
+        for(int j=0;j<total.size()-1;j++){
+            if(count[j]>count[j+1]){
+                temp=count[j];
+                count[j]=count[j+1];
+                count[j+1]=temp;
+                tempst=w[j];
+                w[j]=w[j+1];
+                w[j+1]=tempst;
+                flag=1;
+            }
+        }
+        if (flag==false){ break;}
+    }
+    int k=0;
+    int c[total.size()];
+    for(int i=0;i<total.size();i++){
+        if(count[i]!=0){
+            c[k]=count[i];
+            k++;
+        }
+    }
+    vector<course>z;
+    course tempo(" ");
+    for(int i=0;i<total.size();i++){
+        if(count[i]!=0){
+            tempo.set_ID(w[i]);
+            tempo.scheduling('m');
+            z.push_back(tempo);
+            
+        }
+    }
+    for(int i=0;i<z.size();i++){
+        cout<<z[i].get_room()<<" ";
+    }
+    /**************************************************************************************/
+    
+    string waft[total.size()];
+    for(int i=0;i<total.size();i++){
+        waft[i]=total[i].get_ID();
+    }
+    string tempstaft;
+    int tempaft=0;
+    for(int i=1;i<total.size();i++){
+        bool flag= 0;
+        for(int j=0;j<total.size()-1;j++){
+            if(countaft[j]>countaft[j+1]){
+                tempaft=countaft[j];
+                countaft[j]=countaft[j+1];
+                countaft[j+1]=tempaft;
+                tempstaft=waft[j];
+                waft[j]=waft[j+1];
+                waft[j+1]=tempstaft;
+                flag=1;
+            }
+        }
+        if (flag==false){ break;}
+    }
+    for(int i=0;i<total.size();i++){
+        if(countaft[i]!=0){
+            c[k]=countaft[i];
+            k++;
+        }
+    }
+    course tempoaft(" ");
+    for(int i=0;i<total.size();i++){
+        if(countaft[i]!=0){
+            tempoaft.set_ID(waft[i]);
+            tempoaft.scheduling('a');
+            z.push_back(tempoaft);
+            
+        }
+    }
+    int room=classrooms.size(),room1=classrooms.size();
+    for(int i=0;i<k;i++){
+        if(z[i].course_time()=='m'){
+            do{
+                room--;
+            }while(c[i]>=classrooms[room].get_maxcap()-1);
+            z[i].set_room(classrooms[room].get_room());
+        }
+        else{
+            do{
+                room1--;
+            }while(c[i]>=classrooms[room1].get_maxcap()-1);
+            z[i].set_room(classrooms[room].get_room());
+        }
+    }
+    int sum =0;
+    time_table_print(z, term);
+    for(int i=0;i<k;i++){
+        sum=sum+c[i];
+    }
+    return sum;
+}
+

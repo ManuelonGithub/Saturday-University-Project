@@ -14,6 +14,7 @@ classroom::classroom(int r, int vac)        // Class classroom constructor
 }
 
 string classroom::get_room() { return room_name; }      // Method that retrieves the designated room name
+int classroom::get_maxcap(){ return vacancy; }
 
 void classroom::write(ostream &out) const       // Method that prints the classroom's pertinent information to out
 {

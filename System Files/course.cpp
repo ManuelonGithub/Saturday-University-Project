@@ -14,6 +14,7 @@ course::course(string cID, bool scheduled)
 
 void course::set_pre_req(string const id)   { pre_req.push_back(id);}                       // Method that adds a course ID to the pre-requisite vector that each course contains
 void course::set_room(string room)          { classroom = room; }                           // Method that sets the assigned room for the course during the current term
+void course::set_ID(string id)              { courseID = id; }
 bool course::is_scheduled()                 { return scheduled; }                           // Method that checks if the course has been scheduled for the current term
 char course::course_time()                  { return time; }                                // Method that checks the time slot assigned to the course
 int course::getSizePreReq()                 { return static_cast<int>(pre_req.size()); }    // Method that retrieves how many pre-requisite courses the course has

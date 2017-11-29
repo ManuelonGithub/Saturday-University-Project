@@ -1,0 +1,6 @@
+Term 2 Time Table.txt
+
+Course ID: c3 - Room: R0 - Course time: Morning
+
+Course ID: c1 - Room: R1 - Course time: Afternoon
+
