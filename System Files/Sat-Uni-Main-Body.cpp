@@ -13,51 +13,62 @@ int main()
     vector<student> students;               // A vector of all students attending the university. See student.h and student.cpp for more information
     vector<student> graduated_students;     // WIP: A vector of all student that have graduated. The objective is to remove students from the 'students' vector when they have graduated, and store them here instead
     vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
-    int iteration=0, i, timing= -1;
+    vector<scheduled_course> sched_courses;
+
+    sys.create("system-parameters-in.txt");         // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
+    courses_read("courses.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
+    classrooms_read("classrooms.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
+    students_ini(students, sys.students());         // Initializes the vector of students attending the university. See student.h and student.cpp for more information
+    
+    unsigned long iteration = 2*(classrooms.size()-1);
     int term=0;
     int term_tuition;
-    sys.create("system-parameters-in.txt");     // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
+    bool time_slot_toggle = true;           // true is morning, false is afternoon
 
-    //sys.write(cout);
-
-    courses_read("courses.txt", courses);   // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
-
-    //print_all_courses(cout, courses);
-
-    classrooms_read("classrooms.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
-
-    //print_all_classrooms(cout, classrooms);
-
-    students_ini(students, sys.students()); // Initializes the vector of students attending the university. See student.h and student.cpp for more information
-
-
-    //time_table_creation_test_1(courses, classrooms);
-
-    //time_table_print(courses, sys.terms_to_process());
-
-    iteration = classrooms.size() - 1;
-
-    iteration = iteration*2; // morning and afternoon iterations for each classroom (potential to fill all rooms here)
-
-    for (int k = 0; k < iteration; k++)
-    {
-        cout << "Iteration number: " << k+1 << endl;
-
+    for (int k = 0; k < iteration; k++) {
+        cout << "Iteration number: " << k << endl;
         FUS.clear();
 
-        for (i=0; i < students.size(); i++)
-        {
-            FUS.push_back(students[i].bestChoice(courses)); // FUS gives students suggestion
+        for (int i=0; i < students.size(); i++) {
+            FUS.push_back(course_selection(courses, students[i], time_slot_toggle)); // FUS gives students suggestion
             students[i].set_selected_course(FUS[i]); // save student suggestion in the class
         }
-        timing= timing * -1; //morning/afternoon toggler
 
-        Scheduler(FUS, courses, timing, students, classrooms, k);//Determine what class should be scheduled and when
+        Scheduler(FUS, courses, time_slot_toggle, students, sched_courses);//Determine what class should be scheduled and when
         print_attendance(FUS, courses, students, classrooms);
-
+        time_slot_toggle = !time_slot_toggle; // this is stupid
     }
-        term_tuition = building_manager(courses, students, classrooms,term);//building manager it to be edited when term for loop change
+
+    term_tuition = building_manager(courses, students, classrooms,term);//building manager it to be edited when term for loop change
     cout<<"The amount of tuition paid for term "<<term+1<<" is "<<term_tuition<<endl;
+
+    /*
+    for(int i = 0; i < sched_courses.size(); i++) {
+        sched_courses[i].write(cout);
+    }
+    for (int i=0; i< students.size(); i++){
+            students[i].complete_courses();
+            students[i].graduate(sys.core_courses());
+        }
+
+    for (int i=0; i< courses.size(); i++ ) {
+            courses[i].clear_sch();
+        }
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //for(int i = 0; i < sys.terms_to_process(); i++){
 
     // while( !reg_n_sched_complete):

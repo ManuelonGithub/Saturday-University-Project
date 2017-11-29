@@ -22,7 +22,7 @@ int main()
     
     unsigned long iteration = 2*(classrooms.size()-1);
 
-    for (int i=0; i< sys.terms_to_process(); i++){
+    for (int i=0; i< sys.terms_to_process(); i++) {
         sched_courses.clear();
         bool time_slot_toggle = true;           // true is morning, false is afternoon
     for (int k = 0; k < iteration; k++)
@@ -48,10 +48,9 @@ int main()
             students[i].graduate(sys.core_courses());
         }
         
-    for (int i=0; i< courses.size(); i++ ){
+    for (int i=0; i< courses.size(); i++ ) {
             courses[i].clear_sch();
         }
-        
     }
     /*
     cout << "Room     Morning course/size    Afternoon course/size" << endl;
