@@ -18,7 +18,7 @@ void student::term_completed() 				{ terms_completed++; }          // Method tha
 void student::set_selected_course(string c) { selected_course = c; }        // Method that retrieves the student's ID
 int student::get_id()                       { return st_ID; }               // Method that retrieves the student's ID
 bool student::graduated()                   { return grad;}                 // Method that checks if the student has graduated (true) or not (false)
-string student::attendance(int i)           { return scheduled_courses[i];}
+string student::attendance()           		{ return (m_class + "," + a_class);}
 
 void student::write(ostream &out) const     // Method that prints pertinent student information to out
 {
@@ -47,79 +47,17 @@ void student::write(ostream &out) const     // Method that prints pertinent stud
 	out << "\n\n";
 }
 
-
-void student::schedule(char t, string c)
-{
-	if((t == 'm') && (scheduled_courses[0]== "")) { // don't over write
-		scheduled_courses[0] = c;
-	}
-	if((t == 'a') && (scheduled_courses[1]== "")){
-		scheduled_courses[1] = c;
-	}
-	//completed_courses.push_back(c); // complete record of courses done by the student. Need this gone, have a funciton that deals with this
-}
-
-/*
 void student::schedule(char t)      // Method that schedules the selected courses of the student to the morning of afternoon class slot for the student
 {
-	if(t == 'M' or 'm')  {
+	if(t == 'm')  {
 		m_class = selected_course;
 	}
-	else if(t == 'A' or 'a') {
+	else if(t == 'a') {
 		a_class = selected_course;
 	}
 }
-*/
 
-string student :: bestChoice(vector<course> &available){ //take courses from main as argument
 
-	int preReqDone;
-	string noChoice = "No";
-	vector<string> past; // the courses the student has gotten on each iteration of the FUS
-	vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
-
-	if ((scheduled_courses[0] == "") || (scheduled_courses[1] == "")){ // if student still needs at least one course this term
-		for (int i=0; i < available.size(); i++) // Check all courses
-		{
-			preReqDone=0;
-			for (int k=0; k < completed_courses.size(); k++) // on the next run this is actually runs
-			{
-
-				if ((available[i].get_ID() != completed_courses[k])) // if the student has course already, not an option
-				{
-					for (int h=0; h < available[i].getSizePreReq(); h++)
-					{
-						if (available[i].get_pre_req(h) == completed_courses[k])
-						{
-							preReqDone++; // number of prerequisites filled is increased
-						}
-					}
-				}
-			}
-			if ((preReqDone >= available[i].getSizePreReq()) && (available[i].is_scheduled()==false))
-			{
-				option.push_back(available[i]);
-			}
-		}
-
-		if (option.size() > 0 ) {
-			//Pick a random integer between 0 and number of option courses
-			int ran;
-			ran = rand() % option.size();
-			cout << ran;
-			string bestChoice;
-			bestChoice = option[ran].get_ID();
-			past.push_back(bestChoice);//Storing the student's wish for each iteration
-
-			//cout<< "The FUS has selected course " << bestChoice << " for the student B" << st_ID << endl;
-			return bestChoice;
-		}
-
-	}
-
-	return noChoice;
-
-}
 
 void student::complete_courses()    // Method that transfers the student's scheduled courses for that semester to the completed courses vector
 {
@@ -151,6 +89,23 @@ void student::graduate(int core)    // Method that determines if the student gra
 	if( core_courses_completed >= core && elective_courses_completed >= 2) {
 		grad = true;
 	}
+}
+
+bool student::needs_course()
+{
+	return m_class == "" or a_class == "";
+}
+
+bool student::completed_course(string course)
+{
+	for(int i = 0; i < completed_courses.size(); i++) {
+		if(completed_courses[i] == course)
+		{
+			return true;
+		}
+	}
+
+	return false;
 }
 
 void students_ini(vector<student> &students, int student_count)     // Function that initializes the vector of students attending the university

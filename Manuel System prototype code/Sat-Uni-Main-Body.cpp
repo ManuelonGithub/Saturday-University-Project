@@ -13,49 +13,30 @@ int main()
     vector<student> students;               // A vector of all students attending the university. See student.h and student.cpp for more information
     vector<student> graduated_students;     // WIP: A vector of all student that have graduated. The objective is to remove students from the 'students' vector when they have graduated, and store them here instead
     vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
-    int iteration=0, i, timing= -1;
 
-    sys.create("system-parameters-in.txt");     // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
-
-    //sys.write(cout);
-
-    courses_read("courses.txt", courses);   // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
-
-    //print_all_courses(cout, courses);
-
+    sys.create("system-parameters-in.txt");         // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
+    courses_read("courses.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
     classrooms_read("classrooms.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
+    students_ini(students, sys.students());         // Initializes the vector of students attending the university. See student.h and student.cpp for more information
 
-    //print_all_classrooms(cout, classrooms);
-
-    students_ini(students, sys.students()); // Initializes the vector of students attending the university. See student.h and student.cpp for more information
-
-
-    //time_table_creation_test_1(courses, classrooms);
-
-    //time_table_print(courses, sys.terms_to_process());
-
-    iteration = classrooms.size() - 1;
-
-    iteration = iteration*2; // morning and afternoon iterations for each classroom (potential to fill all rooms here)
+    unsigned long iteration = 2*(classrooms.size()-1);
+    bool time_slot_toggle = true;           // true is morning, false is afternoon
 
     for (int k = 0; k < iteration; k++)
     {
-        cout << "Iteration number: " << k+1 << endl;
-
+        cout << "Iteration number: " << k << endl;
         FUS.clear();
 
-        for (i=0; i < students.size(); i++)
-        {
-            FUS.push_back(students[i].bestChoice(courses)); // FUS gives students suggestion
+        for (int i=0; i < students.size(); i++) {
+            FUS.push_back(course_selection(courses, students[i])); // FUS gives students suggestion
             students[i].set_selected_course(FUS[i]); // save student suggestion in the class
         }
-        timing= timing * -1; //morning/afternoon toggler
 
-        Scheduler(FUS, courses, timing, students, classrooms, k);//Determine what class should be scheduled and when
+        Scheduler(FUS, courses, time_slot_toggle, students, classrooms, k);//Determine what class should be scheduled and when
         print_attendance(FUS, courses, students, classrooms);
-
+        time_slot_toggle = !time_slot_toggle;
     }
-    cout << "Room     Morning course/size    Afternoon course/size"  <<endl;
+    cout << "Room     Morning course/size    Afternoon course/size" << endl;
     for (int i=0; i < classrooms.size(); i++){
         classrooms[i].printCourses();
     }

@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iomanip>
 #include "term_operations.h"
+#include <ctime>
 
 void time_table_print(vector<course> &courses, int t)       // WIP: Creates a text file for every term processed, and prints out the time table for that semester
 {
@@ -44,7 +45,6 @@ void time_table_creation_test_1(vector<course> &courses, vector<classroom> &clas
     }
 }
 
-
 int calculateTuition(vector<course> &term) {
     int tuition=0; // new term, reset tuition
     vector<int> tuitionHistory; // This will hold the tuition paid at each term
@@ -56,7 +56,7 @@ int calculateTuition(vector<course> &term) {
     return tuition; // Is this value 0, 1, or 2 always?
 }
 
-void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<student> &students, vector<classroom> &classrooms, int room){
+void Scheduler(vector<string> &FUS, vector<course> &total, bool time_slot_toggle, vector<student> &students, vector<classroom> &classrooms, int room){
     // room is the iteration count. even == morning odd == afternoon
     int count[total.size()];
     char time;
@@ -75,7 +75,7 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
             }
         }
     }
-    cout << FUS.size() << endl;
+    //cout << FUS.size() << endl;
     for (int j=0; j < total.size(); j++){ // finds course with most wishes
         cout<< total[j].get_ID() <<" has " << count[j]<<endl;
     }
@@ -88,7 +88,7 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
         }
     }
     if (noCount != FUS.size()) { // if at least one course was chosen by a student
-        if (timing==1) {// toggle between morning and afternoon
+        if (time_slot_toggle) {// toggle between morning and afternoon
             time = 'm';
             classrooms[room].setCourseMorning(total[chosen].get_ID(),max);
         }
@@ -102,7 +102,7 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
         for (int i=0; i < students.size(); i++){
             if (total[chosen].get_ID() == FUS[i]){
                 cout << "Student B" << students[i].get_id()<<" will take course " << total[chosen].get_ID() << "in the " << time << endl;
-                students[i].schedule(time, total[chosen].get_ID()) ; // give the student the course at the specified time
+                students[i].schedule(time) ; // give the student the course at the specified time
             }
         }
 
@@ -115,7 +115,7 @@ void Scheduler(vector<string> &FUS, vector<course> &total,int timing, vector<stu
 void print_attendance(vector<string> &FUS, vector<course> &total, vector<student> &students, vector <classroom> &classrooms) {
     cout << "Student       Courses taken" <<endl;
     for (int i=0; i < students.size(); i++){
-        cout << "B" << students[i].get_id() << "               " << students[i].attendance(0) << ","<< students[i].attendance(1)<<endl;
+        cout << "B" << students[i].get_id() << "               " << students[i].attendance() << endl;
     }
 }
 
@@ -131,4 +131,44 @@ void term_completed(vector<student> &grad_st, vector<student> &st, vector<course
         }
     }
     fill(sel_cs.begin(), sel_cs.end(), "");
+}
+
+string course_selection(vector<course> &available, student &s)
+{
+    bool is_option = true;
+    vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
+
+    if(s.needs_course()) {
+        for(int i = 0; i < available.size(); i++) {
+            if(!s.completed_course(available[i].get_ID()) && !available[i].is_scheduled()) {
+                for(int j = 0; j < available[i].getSizePreReq(); j++) {
+                    if(!s.completed_course(available[i].get_pre_req(j))) {
+                        is_option = false;
+                        break;
+                    }
+                }
+                if(is_option) {
+                    option.push_back(available[i]);
+                }
+            }
+            is_option = true;
+        }
+
+        if (!option.empty()) {
+            //Pick a random integer between 0 and number of option courses
+            int ran;
+            ran = rand() % option.size();
+            //cout << ran;
+            string bestChoice;
+            bestChoice = option[ran].get_ID();
+            //past.push_back(bestChoice);//Storing the student's wish for each iteration
+
+            //cout<< "The FUS has selected course " << bestChoice << " for the student B" << s.get_id() << endl;
+
+            s.set_selected_course(bestChoice);
+            return bestChoice;
+        }
+    }
+
+    return "No";
 }
