@@ -107,7 +107,6 @@ bool student::completed_course(string course)
 			return true;
 		}
 	}
-
 	return false;
 }
 

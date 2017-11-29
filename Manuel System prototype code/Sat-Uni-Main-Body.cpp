@@ -19,10 +19,12 @@ int main()
     courses_read("courses.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
     classrooms_read("classrooms.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
     students_ini(students, sys.students());         // Initializes the vector of students attending the university. See student.h and student.cpp for more information
-
+    
     unsigned long iteration = 2*(classrooms.size()-1);
-    bool time_slot_toggle = true;           // true is morning, false is afternoon
 
+    for (int i=0; i< sys.terms_to_process(); i++){
+        sched_courses.clear();
+        bool time_slot_toggle = true;           // true is morning, false is afternoon
     for (int k = 0; k < iteration; k++)
     {
         cout << "Iteration number: " << k << endl;
@@ -35,13 +37,22 @@ int main()
 
         Scheduler(FUS, courses, time_slot_toggle, students, sched_courses);//Determine what class should be scheduled and when
         print_attendance(FUS, courses, students, classrooms);
-        time_slot_toggle = !time_slot_toggle;
+        time_slot_toggle = !time_slot_toggle; // this is stupid
     }
 
     for(int i = 0; i < sched_courses.size(); i++) {
         sched_courses[i].write(cout);
     }
-
+    for (int i=0; i< students.size(); i++){
+            students[i].complete_courses();
+            students[i].graduate(sys.core_courses());
+        }
+        
+    for (int i=0; i< courses.size(); i++ ){
+            courses[i].clear_sch();
+        }
+        
+    }
     /*
     cout << "Room     Morning course/size    Afternoon course/size" << endl;
     for (int i=0; i < classrooms.size(); i++){

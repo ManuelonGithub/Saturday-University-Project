@@ -133,38 +133,41 @@ string course_selection(vector<course> &available, student &s, bool timing)
 {
     bool is_option = true;
     vector<course> option;// new array of possibilities (never taken, has pre reqs, not scheduled already)
-
-    if((s.needs_mor_course() && timing) || (s.needs_aft_course() && !timing)) {
-        for(int i = 0; i < available.size(); i++) {
-            if(!s.completed_course(available[i].get_ID()) && !available[i].is_scheduled()) {
-                for(int j = 0; j < available[i].getSizePreReq(); j++) {
-                    if(!s.completed_course(available[i].get_pre_req(j))) {
-                        is_option = false;
-                        break;
+    
+    if(!s.graduated()) {
+        if((s.needs_mor_course() && timing) || (s.needs_aft_course() && !timing)) {
+            for(int i = 0; i < available.size(); i++) {
+                if(!s.completed_course(available[i].get_ID()) && !available[i].is_scheduled()) {
+                    for(int j = 0; j < available[i].getSizePreReq(); j++) {
+                        if(!s.completed_course(available[i].get_pre_req(j))) {
+                            is_option = false;
+                            break;
+                        }
+                    }
+                    if(is_option) {
+                        option.push_back(available[i]);
                     }
                 }
-                if(is_option) {
-                    option.push_back(available[i]);
-                }
+                is_option = true;
             }
-            is_option = true;
-        }
-
-        if (!option.empty()) {
-            //Pick a random integer between 0 and number of option courses
-            int ran;
-            ran = rand() % option.size();
-            //cout << ran;
-            string bestChoice;
-            bestChoice = option[ran].get_ID();
-            //past.push_back(bestChoice);//Storing the student's wish for each iteration
-
-            //cout<< "The FUS has selected course " << bestChoice << " for the student B" << s.get_id() << endl;
-
-            s.set_selected_course(bestChoice);
-            return bestChoice;
+            
+            if (!option.empty()) {
+                //Pick a random integer between 0 and number of option courses
+                int ran;
+                ran = rand() % option.size();
+                //cout << ran;
+                string bestChoice;
+                bestChoice = option[ran].get_ID();
+                //past.push_back(bestChoice);//Storing the student's wish for each iteration
+                
+                //cout<< "The FUS has selected course " << bestChoice << " for the student B" << s.get_id() << endl;
+                
+                s.set_selected_course(bestChoice);
+                return bestChoice;
+            }
         }
     }
+
 
     return "No";
 }
