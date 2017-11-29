@@ -31,7 +31,8 @@ public:
     string attendance();
     void complete_courses();                            // Method that transfers the student's scheduled courses for that semester to the completed courses vector. see student.cpp line 99 for the method's body
     void graduate(int core);                            // Method that determines if the student graduates or not. see student.cpp line 124 for the method's body
-    bool needs_course();
+    bool needs_mor_course();
+    bool needs_aft_course();
     bool completed_course(string course);
 };
 

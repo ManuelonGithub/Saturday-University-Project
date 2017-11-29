@@ -25,7 +25,7 @@ public:
     string get_ID();                                        // Method that retrieves the course ID. See course.cpp line 21 for the Method's body
     string get_pre_req(int k);                              // Method that retrieves a course ID from the pre-req vector of the course. See course.cpp line 22 for the Method's body
     void write(ostream &out) const;                         // Method that prints pertinent information of the course to out. See course.cpp line 25 for the Method's body
-    void scheduling();                                // Method that schedules the course to its designated time slot. See course.cpp line 50 for the Method's body
+    void schedule();                                // Method that schedules the course to its designated time slot. See course.cpp line 50 for the Method's body
     void clear_sch();                                       // Method that clears out the information that was only pertinent for the past term. See course.cpp line 9 for the Method's body
 
     friend class scheduled_course;
@@ -39,14 +39,14 @@ private:
     char time;                  // Variable that stores whether the course has been assigned to the morning slot or afternoon slot ('m' or 'a')
     int student_attending;  // The amount of students attending the course for the term
 
-
 public:
-    scheduled_course(const string &id, char t);
+    scheduled_course(const string &id, char t, int num = 0);
     void set_room(string room);                             // Method that sets the assigned room for the course during the current term. See course.cpp line 16 for the Method's body
     void set_students(int n);
     string get_room();          // Method that retrieves the assigned room for the course during the current term. See course.cpp line 20 for the Method's body
     int get_students();
     char get_time();
+    void write(ostream &out);
 };
 
 void courses_read(string Filepath, vector<course> &courses);    // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector. See course.cpp line 64 for the function's body

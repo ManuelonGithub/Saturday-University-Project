@@ -49,22 +49,20 @@ void student::write(ostream &out) const     // Method that prints pertinent stud
 
 void student::schedule(char t)      // Method that schedules the selected courses of the student to the morning of afternoon class slot for the student
 {
-	if(t == 'm')  {
+	if(t == 'm' && m_class.empty())  {
 		m_class = selected_course;
 	}
-	else if(t == 'a') {
+	else if(t == 'a' && a_class.empty()) {
 		a_class = selected_course;
 	}
 }
 
-
-
 void student::complete_courses()    // Method that transfers the student's scheduled courses for that semester to the completed courses vector
 {
-	if(m_class != "") {
+	if(!m_class.empty()) {
 		completed_courses.push_back(m_class);
 	}
-	if(a_class != "") {
+	if(!a_class.empty()) {
 		completed_courses.push_back(a_class);
 	}
 	if(m_class[0] == 'c') {
@@ -91,9 +89,14 @@ void student::graduate(int core)    // Method that determines if the student gra
 	}
 }
 
-bool student::needs_course()
+bool student::needs_mor_course()
 {
-	return m_class == "" or a_class == "";
+	return m_class.empty();
+}
+
+bool student::needs_aft_course()
+{
+	return a_class.empty();
 }
 
 bool student::completed_course(string course)

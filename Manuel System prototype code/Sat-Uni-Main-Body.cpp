@@ -13,6 +13,7 @@ int main()
     vector<student> students;               // A vector of all students attending the university. See student.h and student.cpp for more information
     vector<student> graduated_students;     // WIP: A vector of all student that have graduated. The objective is to remove students from the 'students' vector when they have graduated, and store them here instead
     vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
+    vector<scheduled_course> sched_courses;
 
     sys.create("system-parameters-in.txt");         // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
     courses_read("courses.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
@@ -28,18 +29,25 @@ int main()
         FUS.clear();
 
         for (int i=0; i < students.size(); i++) {
-            FUS.push_back(course_selection(courses, students[i])); // FUS gives students suggestion
+            FUS.push_back(course_selection(courses, students[i], time_slot_toggle)); // FUS gives students suggestion
             students[i].set_selected_course(FUS[i]); // save student suggestion in the class
         }
 
-        Scheduler(FUS, courses, time_slot_toggle, students, classrooms, k);//Determine what class should be scheduled and when
+        Scheduler(FUS, courses, time_slot_toggle, students, sched_courses);//Determine what class should be scheduled and when
         print_attendance(FUS, courses, students, classrooms);
         time_slot_toggle = !time_slot_toggle;
     }
+
+    for(int i = 0; i < sched_courses.size(); i++) {
+        sched_courses[i].write(cout);
+    }
+
+    /*
     cout << "Room     Morning course/size    Afternoon course/size" << endl;
     for (int i=0; i < classrooms.size(); i++){
         classrooms[i].printCourses();
     }
+    */
 
     //for(int i = 0; i < sys.terms_to_process(); i++){
 
