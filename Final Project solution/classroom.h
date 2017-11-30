@@ -13,7 +13,7 @@ using namespace std;
 class classroom{
 private:
     string room_name;   // The classroom's designated name
-    int vacancy;        // The vacancy of the classroom
+    int capacity;        // The vacancy of the classroom
     int capacityMorning;
     int capacityAfternoon;
     string m;
@@ -26,6 +26,7 @@ public:
     void setCourseMorning(string morn, int size);
     void setCourseAfternoon(string aft, int size);
     void printCourses(void);
+    int get_maxcap();
 };
 
 void classrooms_read(string Filepath, vector<classroom> &classrooms);   // Function that takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.cpp line 22 for the function's body

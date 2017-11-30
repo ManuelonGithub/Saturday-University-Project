@@ -1,0 +1,100 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp
+fstream
+-
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.h
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.h
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.h
+reg_system.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.h
+term_operations.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.cpp
+iomanip
+-
+fstream
+-
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.h
+iostream
+-
+vector
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.cpp
+iomanip
+-
+fstream
+-
+sstream
+-
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.h
+iostream
+-
+string
+-
+vector
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.cpp
+fstream
+-
+iomanip
+-
+reg_system.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.h
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.h
+iostream
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.cpp
+iomanip
+-
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.h
+ctime
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.h
+iostream
+-
+vector
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.cpp
+fstream
+-
+iomanip
+-
+term_operations.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.h
+ctime
+-
+
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.h
+course.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.h
+classroom.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.h
+student.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.h
+reg_system.h
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.h
+

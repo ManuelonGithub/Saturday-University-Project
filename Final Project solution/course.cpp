@@ -10,7 +10,6 @@ course::course(string cID, bool scheduled)
 {
     courseID = cID;
     type = courseID[0];
-    k_value=0;
 }
 
 void course::set_pre_req(string const id)   { pre_req.push_back(id);}                       // Method that adds a course ID to the pre-requisite vector that each course contains
@@ -18,16 +17,56 @@ bool course::is_scheduled()                 { return scheduled; }               
 int course::getSizePreReq()                 { return static_cast<int>(pre_req.size()); }    // Method that retrieves how many pre-requisite courses the course has
 string course::get_ID()                     { return courseID; }                            // Method that retrieves the course ID
 string course::get_pre_req(int k)           { return pre_req[k]; }                          // Method that retrieves a course ID from the pre-req vector of the course
+void course::set_room(string room)    { classroom = room; }
+void course::set_students(int n)      { student_attending = n; }
+int course::get_students()            { return student_attending; }
+string course::get_room()             { return classroom; }
+char course::get_time()               { return time; }
 
-void course::inc_k_value() {
-    k_value++;
-    cout << courseID << " is a prereq for " << k_value << " class(es)" << endl;
+
+void course::write(ostream &out) const      // Method that prints pertinent information of the course to out
+{
+    out << courseID << ": " << "\n";
+
+    if(!pre_req.empty()) {
+        out << setw(27) <<"pre-requisite courses: ";
+        for (const auto &i : pre_req) {
+            out << i << ", ";
+        }
+        out << "\n";
+    }
+    else  {
+        out << setw(29) << "No pre-requisite courses\n";
+    }
+
+    out << setw(17) << "Course Type: ";
+    if(type == 'c') {
+        out << "Core ";
+    }
+    else if(type == 'e'){
+        out << "Elective";
+    }
+    out << "\n\n";
 }
 
-void course::schedule() { scheduled = true; }     // Method that schedules the course to its designated time slot
-void course::clear_sch() { scheduled = false; }
-int course::get_k_value() { return k_value; }
+void course::schedule(char t) // Method that schedules the course to its designated time slot
+{
+    scheduled = true;
+    time = t;
+}
+void course::clear_sch()
+{
+    scheduled = false;
+    time = ' ';
+    student_attending = 0;
+    classroom = "";
+}
 
+void course::set_ID(string id)
+{
+    courseID = id;
+}
+// Method that clears out the information that was only pertinent for the past term
 
 void courses_read(string Filepath, vector<course> &courses)     // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
 {
@@ -66,6 +105,14 @@ void courses_read(string Filepath, vector<course> &courses)     // Function that
     courses_in.close();
 }
 
+void print_all_courses(ostream &out, vector<course> c)      // Funciton that prints out all courses offered by the university and their pertinent information to out
+{
+    for(int i = 0; i < c.size(); i++)
+    {
+        c[i].write(out);
+    }
+}
+
 scheduled_course::scheduled_course(const string &id, char t, int num)
 {
     courseID = id;
@@ -90,4 +137,3 @@ void scheduled_course::write(ostream &out)
     }
     out << "\t-\t" << "Students Registered for the course: " << student_attending << "\n";
 }
-

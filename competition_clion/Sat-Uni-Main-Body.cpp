@@ -12,8 +12,6 @@ int main()
     vector<course> courses;                 // A vector of all courses offered by the university. See course.h and course.cpp for more information
     vector<classroom> classrooms;           // A vector of all classrooms available to the courses. See classroom.h and classroom.cpp for more information
     vector<student> students;               // A vector of all students attending the university. See student.h and student.cpp for more information
-    vector<student> graduated_students;     // WIP: A vector of all student that have graduated. The objective is to remove students from the 'students' vector when they have graduated, and store them here instead
-    vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
     vector<scheduled_course> sched_courses;
 
     
@@ -28,6 +26,8 @@ int main()
         course_selection(courses, students[i]);
         cout << "Student B" << students[i].get_id() << " courses are: " << students[i].attendance() << "\n";
     }
+
+    course_scheduling();
 
     //for(int i = 0; i < sys.terms_to_process(); i++){
 

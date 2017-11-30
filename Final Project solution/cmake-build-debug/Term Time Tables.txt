@@ -1,0 +1,36 @@
+Term 1 Time-Table: 
+
+Course ID: c3 - Room: R0 - Course time: Morning   - Students attending: 6
+Course ID: c1 - Room: R0 - Course time: Afternoon - Students attending: 10
+
+Term 2 Time-Table: 
+
+Course ID: e4 - Room: R0 - Course time: Morning   - Students attending: 5
+Course ID: e2 - Room: R0 - Course time: Afternoon - Students attending: 6
+
+Term 3 Time-Table: 
+
+Course ID: e4 - Room: R0 - Course time: Morning   - Students attending: 4
+Course ID: c3 - Room: R1 - Course time: Morning   - Students attending: 3
+Course ID: c2 - Room: R0 - Course time: Afternoon - Students attending: 6
+
+Term 4 Time-Table: 
+
+Course ID: e2 - Room: R0 - Course time: Morning   - Students attending: 3
+
+Term 5 Time-Table: 
+
+Course ID: c2 - Room: R0 - Course time: Morning   - Students attending: 3
+
+Term 6 Time-Table: 
+
+N/A
+
+Term 7 Time-Table: 
+
+N/A
+
+Term 8 Time-Table: 
+
+N/A
+
