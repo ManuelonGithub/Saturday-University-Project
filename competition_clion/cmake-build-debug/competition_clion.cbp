@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="competition_clion"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="competition_clion">
+				<Option output="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/competition_clion.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 competition_clion"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="competition_clion/fast">
+				<Option output="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/competition_clion.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 competition_clion/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/Sat-Uni-Main-Body.cpp">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/classroom.cpp">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/classroom.h">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/course.cpp">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/course.h">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/reg_system.cpp">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/reg_system.h">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/student.cpp">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/student.h">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/term_operations.cpp">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/term_operations.h">
+			<Option target="competition_clion"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
