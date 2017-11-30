@@ -15,9 +15,9 @@ int main()
     vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
     vector<scheduled_course> sched_courses;
 
-    sys.create("system-parameters-in.txt");         // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
-    courses_read("courses.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
-    classrooms_read("classrooms.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
+    sys.create("input_para.txt");         // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
+    courses_read("input_course.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
+    classrooms_read("input_room.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
     students_ini(students, sys.students());         // Initializes the vector of students attending the university. See student.h and student.cpp for more information
     
     unsigned long iteration = 2*(classrooms.size()-1);

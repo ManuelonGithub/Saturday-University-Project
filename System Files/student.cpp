@@ -19,6 +19,8 @@ void student::set_selected_course(string c) { selected_course = c; }        // M
 int student::get_id()                       { return st_ID; }               // Method that retrieves the student's ID
 bool student::graduated()                   { return grad;}                 // Method that checks if the student has graduated (true) or not (false)
 string student::attendance()           		{ return (m_class + "," + a_class);}
+void student::clear_m_class()               {m_class = " ";}
+void student::clear_a_class()               {a_class = " ";}
 
 void student::write(ostream &out) const     // Method that prints pertinent student information to out
 {

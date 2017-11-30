@@ -36,6 +36,9 @@ public:
     bool completed_course(string course);
     string mor_course();
     string aft_course();
+    void clear_m_class();
+    void clear_a_class();
+
 };
 
 void students_ini(vector<student> &students, int student_count);

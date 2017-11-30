@@ -23,6 +23,7 @@ int course::get_students()            { return student_attending; }
 string course::get_room()             { return classroom; }
 char course::get_time()               { return time; }
 
+
 void course::write(ostream &out) const      // Method that prints pertinent information of the course to out
 {
     out << courseID << ": " << "\n";

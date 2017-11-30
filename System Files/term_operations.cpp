@@ -204,7 +204,7 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
     for(int i=1;i<total.size();i++){
         bool flag= 0;
         for(int j=0;j<total.size()-1;j++){
-            if(count[j]>count[j+1]){
+            if(count[j]<count[j+1]){
                 temp=count[j];
                 count[j]=count[j+1];
                 count[j+1]=temp;
@@ -231,14 +231,11 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
             tempo.set_ID(w[i]);
             tempo.schedule('m');
             z.push_back(tempo);
-
+            
         }
     }
-    for(int i=0;i<z.size();i++){
-        cout<<z[i].get_room()<<" ";
-    }
     /**************************************************************************************/
-
+    
     string waft[total.size()];
     for(int i=0;i<total.size();i++){
         waft[i]=total[i].get_ID();
@@ -248,7 +245,7 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
     for(int i=1;i<total.size();i++){
         bool flag= 0;
         for(int j=0;j<total.size()-1;j++){
-            if(countaft[j]>countaft[j+1]){
+            if(countaft[j]<countaft[j+1]){
                 tempaft=countaft[j];
                 countaft[j]=countaft[j+1];
                 countaft[j+1]=tempaft;
@@ -260,40 +257,70 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
         }
         if (flag==false){ break;}
     }
+    int k1=0;
+    int caft[total.size()];
     for(int i=0;i<total.size();i++){
         if(countaft[i]!=0){
-            c[k]=countaft[i];
-            k++;
+            caft[k1]=countaft[i];
+            k1++;
         }
     }
+    vector<course>zaft;
     course tempoaft(" ");
     for(int i=0;i<total.size();i++){
         if(countaft[i]!=0){
             tempoaft.set_ID(waft[i]);
             tempoaft.schedule('a');
-            z.push_back(tempoaft);
-
+            zaft.push_back(tempoaft);
         }
     }
-    int room=classrooms.size(), room1=classrooms.size();
+    int room=0,room1=0;//change to zero
     for(int i=0;i<k;i++){
-        if(z[i].get_time()=='m'){
-            do{
-                room--;
-            }while(c[i]>=classrooms[room].get_maxcap()-1);
-            z[i].set_room(classrooms[room].get_room());
-        }
-        else{
-            do{
-                room1--;
-            }while(c[i]>=classrooms[room1].get_maxcap()-1);
-            z[i].set_room(classrooms[room].get_room());
+        z[i].set_room(classrooms[room].get_room());
+        room++;
+    }
+    for(int i=0;i<k1;i++){
+        zaft[i].set_room(classrooms[room1].get_room());
+        room1++;
+    }
+    for(int i=0;i<z.size();i++){ //check classes selected for the morning
+        for(int j=0;j<classrooms.size();j++){ // check classes each room
+            if(z[i].get_room()==classrooms[j].get_room()){ //if the morning classroom is equal to
+                int studentvector=students.size();
+                while(c[i]>classrooms[j].get_maxcap()){
+                    if(students[studentvector].mor_course()==z[i].get_ID()){
+                        c[i]--;
+                        students[studentvector].clear_m_class();
+                    }
+                    studentvector--;
+                }
+            }
         }
     }
-    int sum =0;
+    for(int i=0;i<zaft.size();i++){ //check classes selected for the morning
+        for(int j=0;j<classrooms.size();j++){ // check classes each room
+            if(zaft[i].get_room()==classrooms[j].get_room()){ //if the morning classroom is equal to
+                int studentvectoraft=students.size();
+                while(caft[i]>classrooms[j].get_maxcap()){
+                    if(students[studentvectoraft].aft_course()==zaft[i].get_ID()){
+                        caft[i]--;
+                        students[studentvectoraft].clear_a_class();
+                    }
+                    studentvectoraft--;
+                }
+            }
+        }
+    }
+    for(int i;i<zaft.size();i++){
+        z.push_back(zaft[i]);
+    }
     time_table_print(z, term);
+    z.clear();
+    zaft.clear();
+    int sum =0;
     for(int i=0;i<k;i++){
-        sum=sum+c[i];
+        sum=sum+c[i]+caft[i];
     }
     return sum;
 }
+
