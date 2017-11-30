@@ -37,6 +37,9 @@ public:
     string aft_course();
     void clear_m_class();
     void clear_a_class();
+    void graduated_write(ostream &out, int term) const;
+    void cancel_course(string c);
+    int courses_scheduled();
 };
 
 void students_ini(vector<student> &students, int student_count);

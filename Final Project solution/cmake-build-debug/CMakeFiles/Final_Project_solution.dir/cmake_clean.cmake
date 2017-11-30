@@ -6,8 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Final_Project_solution.dir/student.cpp.o"
   "CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o"
   "Final_Project_solution.pdb"
-  "Final_Project_solution.exe"
-  "libFinal_Project_solution.dll.a"
+  "Final_Project_solution"
 )
 
 # Per-language clean rules from dependency scanning.

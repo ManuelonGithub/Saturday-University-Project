@@ -46,14 +46,3 @@ int reg_system::courses()               { return total_courses_req; }           
 int reg_system::core_courses()          { return core_courses_req; }            // Method that retrieves the total amount of core courses required for a student to graduate
 int reg_system::Sample_Term()           { return Term_to_Sample; }              // Method that retrieves the term # needed to be sampled
 int reg_system::Sample_Student()        { return Student_to_Sample; }           // Method that retrieves the student # that the system needs to sample
-void reg_system::set_classrooms(int r)  { total_classrooms = r; }               // Method that sets the total amount of classrooms available to assign to the courses
-
-/*
-void clear_for_next_term(vector<course> &courses)
-{
-    for(int i = 0; i < courses.size(); i++)
-    {
-        courses[i].clear_sch();
-    }
-}
- */

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake"
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Manuel/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = "/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution"
+CMAKE_SOURCE_DIR = "/home/manuel/Desktop/Saturday-University-Project/Final Project solution"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Final_Project_solution.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Final_Project_solution.dir/flags.make
 
 CMakeFiles/Final_Project_solution.dir/classroom.cpp.o: CMakeFiles/Final_Project_solution.dir/flags.make
 CMakeFiles/Final_Project_solution.dir/classroom.cpp.o: ../classroom.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Final_Project_solution.dir/classroom.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/classroom.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Final_Project_solution.dir/classroom.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/classroom.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/classroom.cpp"
 
 CMakeFiles/Final_Project_solution.dir/classroom.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project_solution.dir/classroom.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.cpp" > CMakeFiles/Final_Project_solution.dir/classroom.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/classroom.cpp" > CMakeFiles/Final_Project_solution.dir/classroom.cpp.i
 
 CMakeFiles/Final_Project_solution.dir/classroom.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project_solution.dir/classroom.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/classroom.cpp" -o CMakeFiles/Final_Project_solution.dir/classroom.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/classroom.cpp" -o CMakeFiles/Final_Project_solution.dir/classroom.cpp.s
 
 CMakeFiles/Final_Project_solution.dir/classroom.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Final_Project_solution.dir/classroom.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/Final_Project_solution.dir/course.cpp.o: CMakeFiles/Final_Project_solution.dir/flags.make
 CMakeFiles/Final_Project_solution.dir/course.cpp.o: ../course.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Final_Project_solution.dir/course.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/course.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Final_Project_solution.dir/course.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/course.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/course.cpp"
 
 CMakeFiles/Final_Project_solution.dir/course.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project_solution.dir/course.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.cpp" > CMakeFiles/Final_Project_solution.dir/course.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/course.cpp" > CMakeFiles/Final_Project_solution.dir/course.cpp.i
 
 CMakeFiles/Final_Project_solution.dir/course.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project_solution.dir/course.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/course.cpp" -o CMakeFiles/Final_Project_solution.dir/course.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/course.cpp" -o CMakeFiles/Final_Project_solution.dir/course.cpp.s
 
 CMakeFiles/Final_Project_solution.dir/course.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/Final_Project_solution.dir/course.cpp.o.provides.build: CMakeFiles/Fi
 
 CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o: CMakeFiles/Final_Project_solution.dir/flags.make
 CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o: ../reg_system.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/reg_system.cpp"
 
 CMakeFiles/Final_Project_solution.dir/reg_system.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project_solution.dir/reg_system.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.cpp" > CMakeFiles/Final_Project_solution.dir/reg_system.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/reg_system.cpp" > CMakeFiles/Final_Project_solution.dir/reg_system.cpp.i
 
 CMakeFiles/Final_Project_solution.dir/reg_system.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project_solution.dir/reg_system.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/reg_system.cpp" -o CMakeFiles/Final_Project_solution.dir/reg_system.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/reg_system.cpp" -o CMakeFiles/Final_Project_solution.dir/reg_system.cpp.s
 
 CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o: CMakeFiles/Final_Project_solution.dir/flags.make
 CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o: ../Sat-Uni-Main-Body.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp"
 
 CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp" > CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp" > CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.i
 
 CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp" -o CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/Sat-Uni-Main-Body.cpp" -o CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.s
 
 CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o.provides.build: CM
 
 CMakeFiles/Final_Project_solution.dir/student.cpp.o: CMakeFiles/Final_Project_solution.dir/flags.make
 CMakeFiles/Final_Project_solution.dir/student.cpp.o: ../student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Final_Project_solution.dir/student.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/student.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Final_Project_solution.dir/student.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/student.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/student.cpp"
 
 CMakeFiles/Final_Project_solution.dir/student.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project_solution.dir/student.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.cpp" > CMakeFiles/Final_Project_solution.dir/student.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/student.cpp" > CMakeFiles/Final_Project_solution.dir/student.cpp.i
 
 CMakeFiles/Final_Project_solution.dir/student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project_solution.dir/student.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/student.cpp" -o CMakeFiles/Final_Project_solution.dir/student.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/student.cpp" -o CMakeFiles/Final_Project_solution.dir/student.cpp.s
 
 CMakeFiles/Final_Project_solution.dir/student.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/Final_Project_solution.dir/student.cpp.o.provides.build: CMakeFiles/F
 
 CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o: CMakeFiles/Final_Project_solution.dir/flags.make
 CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o: ../term_operations.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o -c "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o -c "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/term_operations.cpp"
 
 CMakeFiles/Final_Project_solution.dir/term_operations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Final_Project_solution.dir/term_operations.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.cpp" > CMakeFiles/Final_Project_solution.dir/term_operations.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/term_operations.cpp" > CMakeFiles/Final_Project_solution.dir/term_operations.cpp.i
 
 CMakeFiles/Final_Project_solution.dir/term_operations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Final_Project_solution.dir/term_operations.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/term_operations.cpp" -o CMakeFiles/Final_Project_solution.dir/term_operations.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/term_operations.cpp" -o CMakeFiles/Final_Project_solution.dir/term_operations.cpp.s
 
 CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o.requires:
 
@@ -213,19 +213,19 @@ Final_Project_solution_OBJECTS = \
 # External object files for target Final_Project_solution
 Final_Project_solution_EXTERNAL_OBJECTS =
 
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/classroom.cpp.o
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/course.cpp.o
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/student.cpp.o
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/build.make
-Final_Project_solution.exe: CMakeFiles/Final_Project_solution.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Final_Project_solution.exe"
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/classroom.cpp.o
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/course.cpp.o
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/student.cpp.o
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/build.make
+Final_Project_solution: CMakeFiles/Final_Project_solution.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Final_Project_solution"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Final_Project_solution.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Final_Project_solution.dir/build: Final_Project_solution.exe
+CMakeFiles/Final_Project_solution.dir/build: Final_Project_solution
 
 .PHONY : CMakeFiles/Final_Project_solution.dir/build
 
@@ -243,6 +243,6 @@ CMakeFiles/Final_Project_solution.dir/clean:
 .PHONY : CMakeFiles/Final_Project_solution.dir/clean
 
 CMakeFiles/Final_Project_solution.dir/depend:
-	cd "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles/Final_Project_solution.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/manuel/Desktop/Saturday-University-Project/Final Project solution" "/home/manuel/Desktop/Saturday-University-Project/Final Project solution" "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug" "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug" "/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles/Final_Project_solution.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Final_Project_solution.dir/depend
 

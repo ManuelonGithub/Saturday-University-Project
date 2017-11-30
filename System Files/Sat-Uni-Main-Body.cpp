@@ -1,72 +1,84 @@
+#include <fstream>
 #include "course.h"
 #include "classroom.h"
 #include "student.h"
 #include "reg_system.h"
 #include "term_operations.h"
-void get_num_pre(vector <course> &courses);
 
 int main()
 {
-    srand(time(NULL));
-    reg_system sys{};                       // Our system parameters, in the form of a system object. See reg_system.h and reg_system.cpp for more information
-    vector<course> courses;                 // A vector of all courses offered by the university. See course.h and course.cpp for more information
     vector<classroom> classrooms;           // A vector of all classrooms available to the courses. See classroom.h and classroom.cpp for more information
     vector<student> students;               // A vector of all students attending the university. See student.h and student.cpp for more information
-    vector<scheduled_course> sched_courses;
+    vector<course> courses;                 // A vector of all courses offered by the university. See course.h and course.cpp for more information
+    vector<string> FUS;                     // A vector of the course IDs recommended by the FUS for all students during a term
+    reg_system sys{};                       // Our system parameters, in the form of a system object. See reg_system.h and reg_system.cpp for more information
 
-    
-    sys.create("system-parameters-in.txt");         // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
-    courses_read("courses.txt", courses);           // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
-    classrooms_read("classrooms.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
+    sys.create("input_para.txt");                   // Takes in the system parameter input file and stores the pertinent information for the system. See reg_system.h and reg_system.cpp for more information
     students_ini(students, sys.students());         // Initializes the vector of students attending the university. See student.h and student.cpp for more information
+    courses_read("input_course.txt", courses);      // Function that reads through the course input file creates courses with their pertinent information, and stores them in the university course vector
+    classrooms_read("input_room.txt", classrooms);  // Takes in the classroom input file and adds the classrooms available to the classrooms vector. See classroom.h and classroom.cpp for more information
 
-    get_num_pre(courses);
+    ofstream graduation_status("graduation status.txt");
+    ofstream term_time_table("Term Time Tables.txt");
+    ofstream student_courses("Student Courses.txt");
+    ofstream sampling("sampled data.txt");
+    ofstream tuition_out("Tuition.txt");
 
-    for (int i=0; i < students.size(); i++) {
-        course_selection(courses, students[i]);
-        cout << "Student B" << students[i].get_id() << " courses are: " << students[i].attendance() << "\n";
-    }
 
-    course_scheduling();
+    srand(time(NULL));
+    bool done_scheduling = false;
+    int term_tuition, graduated_students;
+    unsigned long max_iterations = 2*(classrooms.size()-1);
 
-    //for(int i = 0; i < sys.terms_to_process(); i++){
+    sampling << "the courses selected for student B" << sys.Sample_Student() << " for term " << sys.Sample_Term() << " are: ";
 
-    // while( !reg_n_sched_complete):
+    for(int term = 0; term < sys.terms_to_process(); term++) {
+        bool time_slot_toggle = true;           // true is morning, false is afternoon
+        graduated_students = 0;
+        graduation_status << "Students that graduated on term " << (term+1) << ":\n\n";
 
-    // Course Selection  - done^TM
-
-    // Sample student course selection print - not done
-
-    // Course Scheduling - done^TM
-
-    // Building manager duties - done^TM
-
-    // Term time table print - DONE
-
-    // tuition processing - not done (callum)
-
-    //  tution = calculateTuition(courses);
-
-    // courses taking by student during the term (must be sorted according to the number of taken courses in the semester) - not done
-
-    // term_completed() - not done
-
-    // Graduated student by this term - not done
-    //}
-
-    return 0;
-}
-
-void get_num_pre(vector <course> &courses){
-    for (int i=0; i < courses.size(); i++) {
-        for (int k=0; k < courses.size(); k++){
-            if (courses[k].getSizePreReq() != 0) {
-                for (int j=0; j < courses[k].getSizePreReq(); j++ ){
-                    if (courses[i].get_ID() == courses[k].get_pre_req(j)){
-                        courses[i].inc_k_value();
+        for (int k = 0; k < max_iterations; k++) {
+            FUS.clear();
+            for (int i=0; i < students.size(); i++) {
+                FUS.push_back(course_selection(courses, students[i], time_slot_toggle)); // FUS gives students suggestion
+                if(((term+1) == sys.Sample_Term()) && (i == sys.Sample_Student())) {
+                    if(FUS[i] != "No") {
+                        sampling << FUS[i] << ", ";
                     }
                 }
             }
+            done_scheduling = Scheduler(FUS, courses, time_slot_toggle, students);//Determine what class should be scheduled and when
+            time_slot_toggle = !time_slot_toggle;
+
+            if(done_scheduling) { break; }
+        }
+
+        term_tuition = building_manager(courses, students, classrooms, term, term_time_table);
+        tuition_out << "The amount of tuition paid for term "<< (term+1) << " is " << term_tuition <<endl;
+
+        student_courses << "Scheduled courses for students in term " << (term+1) << ":\n\n";
+        print_attendance(student_courses, students);
+
+        for (int i=0; i< students.size(); i++){
+            students[i].complete_courses();
+            students[i].graduate(sys.core_courses());
+            if(students[i].graduated()) {
+                graduated_students++;
+                students[i].graduated_write(graduation_status, term);
+            }
+        }
+
+        graduation_status << "Total amount of graduated students after " << (term+1) << " terms: " << graduated_students << "\n\n\n";
+
+        for (int i=0; i< courses.size(); i++) {
+            courses[i].clear_sch();
         }
     }
+
+    graduation_status.close();
+    student_courses.close();
+    term_time_table.close();
+    tuition_out.close();
+    sampling.close();
+    return 0;
 }

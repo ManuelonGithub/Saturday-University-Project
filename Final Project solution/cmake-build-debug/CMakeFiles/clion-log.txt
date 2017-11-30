@@ -1,4 +1,18 @@
-C:\Users\Manuel\.CLion2017.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution"
+"/home/manuel/Clion/Instalation Files/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/manuel/Desktop/Saturday-University-Project/Final Project solution"
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/Final Project solution/cmake-build-debug
+-- Build files have been written to: /home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug

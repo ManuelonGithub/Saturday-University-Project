@@ -11,11 +11,9 @@
 void time_table_print(vector<course> &courses, int t, ostream &out)       // WIP: Creates a text file for every term processed, and prints out the time table for that semester
 {
     out << "Term " << (t+1) << " Time-Table: " << "\n\n";
-
     if(courses.size() <= 0) {
         out << "N/A" << "\n";
     }
-
     else {
         for (int i = 0; i < courses.size(); i++) {
             if(courses[i].is_scheduled()) {
@@ -30,7 +28,6 @@ void time_table_print(vector<course> &courses, int t, ostream &out)       // WIP
             }
         }
     }
-
     out << "\n";
 }
 
@@ -42,7 +39,6 @@ bool Scheduler(vector<string> &FUS, vector<course> &total, bool time_slot_toggle
     for (int i=0; i < total.size(); i++){ //initialize count
         count[i]=0;
     }
-
     for(int i=0;i<FUS.size();i++){
         if (FUS[i]=="No") {
             noCount++;
@@ -61,7 +57,7 @@ bool Scheduler(vector<string> &FUS, vector<course> &total, bool time_slot_toggle
             chosen=i;
         }
     }
-    if (noCount != FUS.size()) { // if at least one course was chosen by a student
+    if(noCount != FUS.size()) { // if at least one course was chosen by a student
 
         if(time_slot_toggle)    { time = 'm'; }
         else                    { time = 'a'; }
@@ -72,7 +68,6 @@ bool Scheduler(vector<string> &FUS, vector<course> &total, bool time_slot_toggle
                 students[i].schedule(time) ; // give the student the course at the specified time
             }
         }
-
         return false;
     }
     else {
@@ -80,12 +75,26 @@ bool Scheduler(vector<string> &FUS, vector<course> &total, bool time_slot_toggle
     }
 }
 
-void print_attendance(vector<string> &FUS, vector<course> &total, vector<student> &students, vector <classroom> &classrooms)
+void print_attendance(ostream &out, vector<student> &students)
 {
-    cout << "Student       Courses taken" <<endl;
+    out << "Student       Courses taken (morning,afternoon)" <<endl;
+
     for (int i=0; i < students.size(); i++){
-        cout << "B" << students[i].get_id() << "               " << students[i].attendance() << endl;
+        if(students[i].courses_scheduled() == 2) {
+            out << "B" << students[i].get_id() << "               " << students[i].attendance() << endl;
+        }
     }
+    for (int i=0; i < students.size(); i++){
+        if(students[i].courses_scheduled() == 1) {
+            out << "B" << students[i].get_id() << "               " << students[i].attendance() << endl;
+        }
+    }
+    for (int i=0; i < students.size(); i++){
+        if(students[i].courses_scheduled() == 0) {
+            out << "B" << students[i].get_id() << "               " << students[i].attendance() << endl;
+        }
+    }
+    out << "\n";
 }
 
 void term_completed(vector<student> &grad_st, vector<student> &st, vector<course> &c, vector<string> &sel_cs, reg_system &sys)      // WIP: Funcion to be called at the end of each semester
@@ -170,11 +179,17 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
         w[i]=total[i].get_ID();
     }
     for(int i=0;i<total.size();i++){//this part of the code cancels classes with less than 3 students
-        if (count[i]<3){
+        if (count[i]<3 && count[i] != 0){
             count[i]=0;
+            for (int j = 0; j < students.size(); ++j) {
+                students[j].cancel_course(total[i].get_ID());
+            }
         }
-        if (countaft[i]<3){
+        if (countaft[i]<3 && countaft[i] != 0){
             countaft[i]=0;
+            for (int j = 0; j < students.size(); ++j) {
+                students[j].cancel_course(total[i].get_ID());
+            }
         }
     }
     string tempst;
@@ -295,7 +310,6 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
         }
     }
 
-
     for(int i = 0; i < zaft.size(); i++) {
         zaft[i].set_students(caft[i]);
     }
@@ -318,4 +332,3 @@ int building_manager(vector<course> &total, vector<student> &students, vector <c
     }
     return sum;
 }
-

@@ -16,7 +16,7 @@ void time_table_print(vector<course> &courses, int t, ostream &out);  // WIP: Cr
 
 bool Scheduler(vector<string> &FUS, vector<course> &total, bool time_slot_toggle, vector<student> &students);
 
-void print_attendance(vector<string> &FUS, vector<course> &total, vector<student> &students, vector <classroom> &classrooms);
+void print_attendance(ostream &out, vector<student> &students);
 
 string course_selection(vector<course> &available, student &s, bool timing);
 

@@ -113,6 +113,35 @@ bool student::completed_course(string course)
 string student::aft_course() { return a_class; }
 string student::mor_course() { return m_class; }
 
+void student::graduated_write(ostream &out, int term) const
+{
+	if(terms_completed == (term+1)) {
+		out << "Student B" << st_ID << " - " << " Courses completed: ";
+		for(int i = 0; i < completed_courses.size(); i++) {
+			out << completed_courses[i] << ", ";
+		}
+		out << "\n";
+	}
+}
+
+void student::cancel_course(string c)
+{
+	if(m_class == c) {
+		m_class = "";
+	}
+	if(a_class == c) {
+		a_class = "";
+	}
+}
+
+int student::courses_scheduled()
+{
+	int x = 0;
+	if(!m_class.empty()) {x++;}
+	if(!a_class.empty()) {x++;}
+	return x;
+}
+
 void students_ini(vector<student> &students, int student_count)     // Function that initializes the vector of students attending the university
 {
 	for(int i = 1; i <= student_count; i++)

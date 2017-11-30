@@ -1,0 +1,112 @@
+Scheduled courses for students in term 1:
+
+Student       Courses taken (morning,afternoon)
+B1               c1,c3
+B2               c1,c3
+B4               c1,c3
+B5               c1,c3
+B8               c1,c3
+B9               c1,c3
+B3               ,c3
+B6               ,c3
+B7               ,c3
+B10               ,c3
+
+Scheduled courses for students in term 2:
+
+Student       Courses taken (morning,afternoon)
+B1               e4,e2
+B2               e4,e2
+B3               c1,e2
+B4               e4,e2
+B6               c1,e2
+B9               e4,e2
+B5               ,e2
+B7               c1,
+B8               ,e2
+B10               c1,
+
+Scheduled courses for students in term 3:
+
+Student       Courses taken (morning,afternoon)
+B8               c2,e4
+B1               c2,
+B2               c2,
+B3               ,e4
+B4               c2,
+B5               ,e4
+B6               ,e4
+B9               c2,
+B10               ,e4
+B7               ,
+
+Scheduled courses for students in term 4:
+
+Student       Courses taken (morning,afternoon)
+B3               c2,
+B5               c2,
+B6               c2,
+B1               ,
+B2               ,
+B4               ,
+B7               ,
+B8               ,
+B9               ,
+B10               ,
+
+Scheduled courses for students in term 5:
+
+Student       Courses taken (morning,afternoon)
+B1               ,
+B2               ,
+B3               ,
+B4               ,
+B5               ,
+B6               ,
+B7               ,
+B8               ,
+B9               ,
+B10               ,
+
+Scheduled courses for students in term 6:
+
+Student       Courses taken (morning,afternoon)
+B1               ,
+B2               ,
+B3               ,
+B4               ,
+B5               ,
+B6               ,
+B7               ,
+B8               ,
+B9               ,
+B10               ,
+
+Scheduled courses for students in term 7:
+
+Student       Courses taken (morning,afternoon)
+B1               ,
+B2               ,
+B3               ,
+B4               ,
+B5               ,
+B6               ,
+B7               ,
+B8               ,
+B9               ,
+B10               ,
+
+Scheduled courses for students in term 8:
+
+Student       Courses taken (morning,afternoon)
+B1               ,
+B2               ,
+B3               ,
+B4               ,
+B5               ,
+B6               ,
+B7               ,
+B8               ,
+B9               ,
+B10               ,
+

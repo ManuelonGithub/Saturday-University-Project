@@ -1,8 +1,8 @@
 The amount of tuition paid for term 1 is 16
-The amount of tuition paid for term 2 is 11
-The amount of tuition paid for term 3 is 13
+The amount of tuition paid for term 2 is 16
+The amount of tuition paid for term 3 is 10
 The amount of tuition paid for term 4 is 3
-The amount of tuition paid for term 5 is 3
+The amount of tuition paid for term 5 is 0
 The amount of tuition paid for term 6 is 0
 The amount of tuition paid for term 7 is 0
 The amount of tuition paid for term 8 is 0
