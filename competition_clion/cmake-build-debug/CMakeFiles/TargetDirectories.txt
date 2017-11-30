@@ -1,0 +1,3 @@
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Manuel/Documents/github/Saturday-University-Project/competition_clion/cmake-build-debug/CMakeFiles/competition_clion.dir
