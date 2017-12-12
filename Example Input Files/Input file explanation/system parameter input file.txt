@@ -1,0 +1,5 @@
+A	- Number of students the system needs to process
+B	- Number of terms the system needs to process
+C	- Total number of courses a student must take to graduate (there's always 2 electives needed, so C - 2 = # of core courses needed)
+D	- The term we need to sample for the course selections for our sample student
+E	- The student # we need to sample

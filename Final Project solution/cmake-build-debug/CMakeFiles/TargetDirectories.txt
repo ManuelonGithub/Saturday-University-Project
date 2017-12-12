@@ -1,3 +1,0 @@
-/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/manuel/Desktop/Saturday-University-Project/Final Project solution/cmake-build-debug/CMakeFiles/Final_Project_solution.dir

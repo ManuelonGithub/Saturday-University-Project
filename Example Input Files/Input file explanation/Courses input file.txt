@@ -1,0 +1,10 @@
+X		- total amount of courses available to the students. The example below would have X = 9
+c2002		- the courses are signaled as 'core' or 'elective' by the letter in the beginning of the course ID (either 'c' or 'e')
+c3003 c2002	- Course IDs that follow the first ID are the course pre-requisites to the first ID in the line
+c3232
+c4000 c3232
+c5015 c3232 c3003 e1000
+c4507 c5015 c3232
+e1000
+e2000
+e3000 e2000 e1000 c2002

@@ -4,6 +4,7 @@
 #include "student.h"
 #include "reg_system.h"
 #include "term_operations.h"
+#include <ctime>
 
 int main()
 {

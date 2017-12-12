@@ -1,0 +1,6 @@
+X	- Total number of classrooms available for the University. For the example below, X = 5
+100	- These numbers refer to the classroom capacity of each room. This room, for example, can house 100 students
+150
+80
+50
+20

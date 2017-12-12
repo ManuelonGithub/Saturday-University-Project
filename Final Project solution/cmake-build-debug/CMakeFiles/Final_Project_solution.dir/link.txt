@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Final_Project_solution.dir/classroom.cpp.o CMakeFiles/Final_Project_solution.dir/course.cpp.o CMakeFiles/Final_Project_solution.dir/reg_system.cpp.o CMakeFiles/Final_Project_solution.dir/Sat-Uni-Main-Body.cpp.o CMakeFiles/Final_Project_solution.dir/student.cpp.o CMakeFiles/Final_Project_solution.dir/term_operations.cpp.o  -o Final_Project_solution 
